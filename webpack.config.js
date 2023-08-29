@@ -41,6 +41,9 @@ module.exports = {
     ]
   },
   devServer: {
+    port: 8080,
+    hot: true,
+    historyApiFallback: true,
     static: {
       directory: path.resolve(__dirname, 'client/components/public'),
       publicPath: 'bundle.js',
