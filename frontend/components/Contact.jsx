@@ -6,8 +6,8 @@ const Contact = () => {
         <>
         {/* <Nav /> */}
         <p>Send Us A Message</p>
-        <div id='box1'>
-            <form>
+        <div id='contact'>
+            <form id='box1'>
                 <p>Name</p>
                 <input></input>
                 <p>Phone</p>
@@ -16,7 +16,7 @@ const Contact = () => {
                 <input></input>
                 <p>Message</p>
                 <input></input>
-                <button type='submit'>Submit</button>
+                <button type='submit' id='contactButton'>Submit</button>
             </form>
             <div id='box2'>
                 <p>Mailing Address:</p>

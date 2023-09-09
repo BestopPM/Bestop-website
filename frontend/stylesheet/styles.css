@@ -1,10 +1,22 @@
 
-#box1 {
+#contact {
     display: flex;
+}
+
+#box1 {
+    border: solid black;
+    border-radius: 10px;
+    padding: 2em;
 }
 
 #box2 {
     display: flex;
     flex-direction: column;
     padding-left: 3em;
+}
+
+#contactButton {
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
 }
