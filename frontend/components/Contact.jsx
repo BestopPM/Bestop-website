@@ -6,7 +6,7 @@ const Contact = () => {
         <>
         {/* <Nav /> */}
         <p>Send Us A Message</p>
-        <div>
+        <div id='box1'>
             <form>
                 <p>Name</p>
                 <input></input>
@@ -18,7 +18,7 @@ const Contact = () => {
                 <input></input>
                 <button type='submit'>Submit</button>
             </form>
-            <div>
+            <div id='box2'>
                 <p>Mailing Address:</p>
                 <p>47000 Warm Springs Blvd Ste 274 Fremont, CA 94539</p>
                 <p>Email:</p>
