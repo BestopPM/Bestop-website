@@ -19,15 +19,24 @@ const Contact = () => {
                 <button type='submit' id='contactButton'>Submit</button>
             </form>
             <div id='box2'>
-                <p>Mailing Address:</p>
-                <p>47000 Warm Springs Blvd Ste 274 Fremont, CA 94539</p>
-                <p>Email:</p>
-                <p>Phone:</p>
-                <p>(510) 936-8686</p>
+                <section>
+                    <p>Mailing Address:</p>
+                    <p>47000 Warm Springs Blvd Ste 274 Fremont, CA 94539</p>
+                </section>
+                <section>
+                    <p>Email:</p>
+                    <p>TBD</p>
+                    </section>
+                <section>
+                    <p>Phone:</p>
+                    <p>(510) 936-8686</p>
+                    </section>
+                <section>
                 <p>Business Hours:</p>
                 <p>Mon-Fri:   9:00am - 6:00pm</p>
                 <p>Sat-Sun:   Closed</p>
-                <a href='/tenant'>Maintenance Request</a>
+                </section>
+                <a href='/tenant' id='maintenanceButton'>Maintenance Request</a>
             </div>
         </div>
         </>
