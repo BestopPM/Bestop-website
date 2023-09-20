@@ -5,7 +5,9 @@ const Contact = () => {
     return (
         <>
         {/* <Nav /> */}
-        <p>Send Us A Message</p>
+        <div id='message'>
+            <p>Send Us A Message</p>
+        </div>
         <div id='contact'>
             <form id='box1'>
                 <p>Name*</p>

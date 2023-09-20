@@ -1,9 +1,20 @@
 
+#message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 8vw;
+    margin-left: 28em;
+    padding-top: 10em;
+    font-size: large;
+}
+
 #contact {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 12em;
+
 }
 
 #box1 {
