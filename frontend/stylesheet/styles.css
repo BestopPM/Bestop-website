@@ -22,7 +22,6 @@
     width: 20vw;
     height: 3vh;
     border-radius: 7px;
-   
     margin-bottom: 25px;
 }
 
@@ -50,4 +49,8 @@
     margin-top: 20px;
     align-items: center;
     justify-content: center;
+}
+
+#maintenanceButton {
+    margin-top: 1vh;
 }
