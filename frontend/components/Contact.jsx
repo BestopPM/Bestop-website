@@ -8,13 +8,13 @@ const Contact = () => {
         <p>Send Us A Message</p>
         <div id='contact'>
             <form id='box1'>
-                <p>Name:</p>
+                <p>Name*</p>
                 <input type='text' class='contactInput' required></input>
-                <p>Phone:</p>
+                <p>Phone*</p>
                 <input type='tel'  class='contactInput' required></input>
-                <p>Email:</p>
+                <p>Email*</p>
                 <input type='email'  class='contactInput' required></input>
-                <p>Message:</p>
+                <p>Message*</p>
                 <input type='text' required id='contactMessage'></input>
                 <button type='submit' id='contactButton'>Submit</button>
             </form>
