@@ -1,6 +1,9 @@
 
 #contact {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 12em;
 }
 
 #box1 {
