@@ -23,10 +23,10 @@ const Contact = () => {
                 <p>47000 Warm Springs Blvd Ste 274 Fremont, CA 94539</p>
                 <p>Email:</p>
                 <p>Phone:</p>
-                <span>(510)936-8686</span>
+                <p>(510) 936-8686</p>
                 <p>Business Hours:</p>
-                <p>Mon-Fri   9:00am - 6:00pm</p>
-                <p>Sat-Sun   Closed</p>
+                <p>Mon-Fri:   9:00am - 6:00pm</p>
+                <p>Sat-Sun:   Closed</p>
                 <a href='/tenant'>Maintenance Request</a>
             </div>
         </div>
