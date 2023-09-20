@@ -9,13 +9,13 @@ const Contact = () => {
         <div id='contact'>
             <form id='box1'>
                 <p>Name</p>
-                <input></input>
+                <input type='text' required></input>
                 <p>Phone</p>
-                <input></input>
+                <input type='tel' required></input>
                 <p>Email</p>
-                <input></input>
+                <input type='email' required></input>
                 <p>Message</p>
-                <input></input>
+                <input type='text' required id='contactMessage'></input>
                 <button type='submit' id='contactButton'>Submit</button>
             </form>
             <div id='box2'>
