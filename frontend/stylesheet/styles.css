@@ -14,6 +14,7 @@
     align-items: center;
     overflow-x: none;
     overflow-y: scroll;
+    line-height: 4px;
 }
 
 .contactInput {
@@ -21,6 +22,8 @@
     width: 20vw;
     height: 3vh;
     border-radius: 7px;
+   
+    margin-bottom: 25px;
 }
 
 #box2 {
@@ -36,6 +39,7 @@
     width: 20vw;
     overflow: none;
     border-radius: 7px;
+    margin-top: -5px;
 }
 
 #contactButton {
