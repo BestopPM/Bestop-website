@@ -1,7 +1,21 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import '../stylesheet/styles.css';
+// import emailjs from '@emailjs/browser'
 
 const Contact = () => {
+
+    const form = useRef();
+    // const sendForm = (e) => {
+    //     e.preventDefault();
+
+    //     emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+    //         .then((result) => {
+    //             console.log(result.text);
+    //         }, (error) => {
+    //             console.log(error.text)
+    //         })
+    // }
+
     return (
         <>
         {/* <Nav /> */}
@@ -9,7 +23,7 @@ const Contact = () => {
             <p>Send Us A Message</p>
         </div>
         <div id='contact'>
-            <form id='box1'>
+            <form id='box1' ref={form} onSubmit={sendForm}>
                 <p>Name*</p>
                 <input type='text' class='contactInput' required></input>
                 <p>Phone*</p>
@@ -18,7 +32,7 @@ const Contact = () => {
                 <input type='email'  class='contactInput' required></input>
                 <p>Message*</p>
                 <textarea type='text' required id='contactMessage'></textarea>
-                <button type='submit' id='contactButton'>Submit</button>
+                <button type='submit' id='contactButton' value='Send'>Submit</button>
             </form>
             <div id='box2'>
                 <section>
