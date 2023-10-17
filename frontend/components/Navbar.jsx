@@ -3,20 +3,21 @@ import React from 'react'
 const Navbar = () => {
   return(
     <nav>
+      <h1>Logo</h1>
       <div>
-        <a href="/" className="">
+        <a href="/about" className="">
           About Us
         </a>
-        <a href="/" className="">
+        <a href="/owner" className="">
           Owner Services
         </a>
-        <a href="/" className="">
+        <a href="/tenant" className="">
           Tenant Services
         </a>
-        <a href="/" className="">
+        <a href="/rentals" className="">
           Available Rentals
         </a>
-        <a href="/" className="">
+        <a href="/contact" className="">
           Contact Us
         </a>
       </div>
