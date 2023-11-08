@@ -71,7 +71,7 @@
     justify-content: center;
     align-items: center;
     width: 8vw;
-    margin-left: 31em;
+    margin-left: 8em;
     padding-top: 3em;
     font-size: large;
 }
@@ -90,7 +90,8 @@
     border: solid black;
     border-radius: 10px;
     padding: 2em;
-    min-width: 25em;
+    /* min-width: 25em; */
+    width: 80vw;
     align-items: center;
     overflow-x: none;
     overflow-y: scroll;
@@ -104,7 +105,8 @@
 }
 
 #rentalInfo {
-    margin-left: 2vw;
+    margin-left: 4vw;
+    width: 60em;
 }
 
 #showingButton {
@@ -119,7 +121,6 @@
 
 #rentalApp {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-left: 10em;
     margin-top: 20px;
 }
