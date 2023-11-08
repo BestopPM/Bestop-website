@@ -25,7 +25,7 @@ const Rentals = () => {
         <div id='rentalInfo'>
           <p>Rental Price: </p>
           <p>Property Address: </p>
-          <a>Additional Details: </a>
+          <a href='https://www.zillow.com/'>Additional Details</a>
           <button id='showingButton' href='/rentalModal'>Request a Showing</button>
         </div>
       </div>
