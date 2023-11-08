@@ -26,7 +26,7 @@ const Rentals = () => {
           <p>Rental Price: </p>
           <p>Property Address: </p>
           <a>Additional Details: </a>
-          <button id='showingButton'>Request a Showing</button>
+          <button id='showingButton' href='/rentalModal'>Request a Showing</button>
         </div>
       </div>
     </div>
