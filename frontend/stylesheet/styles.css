@@ -14,7 +14,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 #box1 {
@@ -64,4 +63,63 @@
 
 #maintenanceButton {
     margin-top: 1vh;
+}
+
+#rentalMessage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 8vw;
+    margin-left: 31em;
+    padding-top: 3em;
+    font-size: large;
+}
+
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#rental {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: solid black;
+    border-radius: 10px;
+    padding: 2em;
+    min-width: 25em;
+    align-items: center;
+    overflow-x: none;
+    overflow-y: scroll;
+    line-height: 4px;
+}
+
+#rentalImage {
+    border: solid black;
+    border-radius: 10px;
+    padding: 1em;
+}
+
+#rentalInfo {
+    margin-left: 2vw;
+}
+
+#showingButton {
+    display: flex;
+    width: 10vw;
+    height: 4vh;
+    border-radius: 7px;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+#rentalApp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
