@@ -18,7 +18,6 @@ const Contact = () => {
 
     return (
         <>
-        {/* <Nav /> */}
         <div id='message'>
             <p>Send Us A Message</p>
         </div>
