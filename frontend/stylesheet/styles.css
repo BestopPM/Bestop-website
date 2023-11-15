@@ -67,11 +67,10 @@
 
 #rentalMessage {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
-    width: 8vw;
-    margin-left: 8em;
+    /* width: 8vw; */
+    margin-left: 8vw;
     padding-top: 3em;
     font-size: large;
 }
