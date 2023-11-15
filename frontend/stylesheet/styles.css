@@ -106,6 +106,7 @@
 #rentalInfo {
     margin-left: 4vw;
     width: 60em;
+    line-height: 2vh;
 }
 
 #showingButton {
