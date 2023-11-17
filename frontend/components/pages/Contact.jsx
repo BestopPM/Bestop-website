@@ -35,6 +35,7 @@ const Contact = () => {
           {/* name */}
           <input
             type="text"
+            name="user_name"
             class="contactInput"
             maxlength="50"
             placeholder="Name*"
@@ -43,6 +44,7 @@ const Contact = () => {
           {/* phone */}
           <input
             type="tel"
+            name="user_phone"
             class="contactInput"
             pattern="\(?\d{3}\)?-? *\d{3}-? *-?\d{4}"
             placeholder="Phone Number*"
@@ -51,6 +53,7 @@ const Contact = () => {
           {/* email */}
           <input
             type="email"
+            name="user_email"
             class="contactInput"
             maxlength="50"
             placeholder="Email Address*"
@@ -59,11 +62,12 @@ const Contact = () => {
           {/* message */}
           <textarea
             type="text"
+            name="message"
             placeholder="Message*"
             maxLength="500"
             required
           ></textarea>
-          <button type="submit" id="contactButton" value="Send">
+          <button type="submit" id="contactButton" value="send">
             Submit
           </button>
         </form>
