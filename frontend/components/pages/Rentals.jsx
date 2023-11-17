@@ -20,7 +20,7 @@ const Rentals = () => {
     <div id='contact'>
       <div id='rental'>
         <div id='rentalImage'>
-          <img src='https://i.imgur.com/HXS98BO_d.webp?maxwidth=760&fidelity=grand'></img>
+          <img src=''></img>
         </div>
         <div id='rentalInfo'>
           <p>Rental Price: </p>
