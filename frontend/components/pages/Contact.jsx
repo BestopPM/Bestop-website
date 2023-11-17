@@ -17,6 +17,7 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
+          e.target.reset();
         },
         (error) => {
           console.log(error.text);
@@ -36,8 +37,8 @@ const Contact = () => {
           <input
             type="text"
             name="user_name"
-            class="contactInput"
-            maxlength="50"
+            className="contactInput"
+            maxLength="50"
             placeholder="Name*"
             required
           ></input>
@@ -45,7 +46,7 @@ const Contact = () => {
           <input
             type="tel"
             name="user_phone"
-            class="contactInput"
+            className="contactInput"
             pattern="\(?\d{3}\)?-? *\d{3}-? *-?\d{4}"
             placeholder="Phone Number*"
             required
@@ -54,8 +55,8 @@ const Contact = () => {
           <input
             type="email"
             name="user_email"
-            class="contactInput"
-            maxlength="50"
+            className="contactInput"
+            maxLength="50"
             placeholder="Email Address*"
             required
           ></input>
@@ -63,6 +64,7 @@ const Contact = () => {
           <textarea
             type="text"
             name="message"
+            className="message"
             placeholder="Message*"
             maxLength="500"
             required
