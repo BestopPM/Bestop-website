@@ -1,61 +1,97 @@
-import React, {useRef} from 'react';
-import '../../stylesheet/styles.css';
-// import emailjs from '@emailjs/browser'
+import React, { useRef } from "react";
+import "../../stylesheet/styles.css";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-    const form = useRef();
-    const sendForm = (e) => {
-        e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_ybsczy9",
+        "template_o0qg5a4",
+        form.current,
+        "aKD-Us6N3g93XuFJ8"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
 
-        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text)
-            })
-    }
-
-    return (
-        <>
-        <div id='message'>
-            <p>Send Us A Message</p>
+  return (
+    <>
+      <div id="message">
+        <h1>Send Us A Message</h1>
+      </div>
+      <div id="contact">
+        {/* contact form */}
+        <form id="box1" ref={form} onSubmit={sendEmail}>
+          {/* name */}
+          <input
+            type="text"
+            class="contactInput"
+            maxlength="50"
+            placeholder="Name*"
+            required
+          ></input>
+          {/* phone */}
+          <input
+            type="tel"
+            class="contactInput"
+            pattern="\(?\d{3}\)?-? *\d{3}-? *-?\d{4}"
+            placeholder="Phone Number*"
+            required
+          ></input>
+          {/* email */}
+          <input
+            type="email"
+            class="contactInput"
+            maxlength="50"
+            placeholder="Email Address*"
+            required
+          ></input>
+          {/* message */}
+          <textarea
+            type="text"
+            placeholder="Message*"
+            maxLength="500"
+            required
+          ></textarea>
+          <button type="submit" id="contactButton" value="Send">
+            Submit
+          </button>
+        </form>
+        <div id="box2">
+          <section>
+            <p>Mailing Address:</p>
+            <p>47000 Warm Springs Blvd Ste 274 Fremont, CA 94539</p>
+          </section>
+          <section>
+            <p>Email:</p>
+            <p>TBD</p>
+          </section>
+          <section>
+            <p>Phone:</p>
+            <p>(510) 936-8686</p>
+          </section>
+          <section>
+            <p>Business Hours:</p>
+            <p>Mon-Fri: 9:00am - 6:00pm</p>
+            <p>Sat-Sun: Closed</p>
+          </section>
+          <a href="/tenant" id="maintenanceButton">
+            Maintenance Request
+          </a>
         </div>
-        <div id='contact'>
-            <form id='box1' ref={form} onSubmit={sendForm}>
-                <p>Name*</p>
-                <input type='text' class='contactInput' required></input>
-                <p>Phone*</p>
-                <input type='tel'  class='contactInput' required></input>
-                <p>Email*</p>
-                <input type='email'  class='contactInput' required></input>
-                <p>Message*</p>
-                <textarea type='text' required id='contactMessage'></textarea>
-                <button type='submit' id='contactButton' value='Send'>Submit</button>
-            </form>
-            <div id='box2'>
-                <section>
-                    <p>Mailing Address:</p>
-                    <p>47000 Warm Springs Blvd Ste 274 Fremont, CA 94539</p>
-                </section>
-                <section>
-                    <p>Email:</p>
-                    <p>TBD</p>
-                    </section>
-                <section>
-                    <p>Phone:</p>
-                    <p>(510) 936-8686</p>
-                    </section>
-                <section>
-                <p>Business Hours:</p>
-                <p>Mon-Fri:   9:00am - 6:00pm</p>
-                <p>Sat-Sun:   Closed</p>
-                </section>
-                <a href='/tenant' id='maintenanceButton'>Maintenance Request</a>
-            </div>
-        </div>
-        </>
-    )
-}
+      </div>
+    </>
+  );
+};
 
-export default Contact
+export default Contact;
