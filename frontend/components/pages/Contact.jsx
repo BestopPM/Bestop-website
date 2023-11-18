@@ -17,6 +17,7 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
+          alert("Thank you - your message has been received!");
           e.target.reset();
         },
         (error) => {
