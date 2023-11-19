@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import "../../stylesheet/styles.css";
 import emailjs from "emailjs-com";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   const form = useRef();
@@ -92,9 +93,7 @@ const Contact = () => {
             <p>Mon-Fri: 9:00am - 6:00pm</p>
             <p>Sat-Sun: Closed</p>
           </section>
-          <a href="/tenant" id="maintenanceButton">
-            Maintenance Request
-          </a>
+          <Link to="/tenant"> Maintenance Request </Link>
         </div>
       </div>
     </>
