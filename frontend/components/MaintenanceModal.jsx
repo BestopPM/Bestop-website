@@ -1,5 +1,4 @@
 import React from "react";
-import SubmitButton from "./SubmitButton";
 
 const Modal = ({ closeModal }) => {
   return (
@@ -9,7 +8,6 @@ const Modal = ({ closeModal }) => {
       </div>
       <div>
         <button onClick={() => closeModal(false)}>Cancel</button>
-        <SubmitButton />
       </div>
     </div>
   );
