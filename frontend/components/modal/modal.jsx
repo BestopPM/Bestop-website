@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect, useRef } from 'react'
 
 const Modal = ({ isOpen, hasCloseBtn, onClose, children }) => {
   const [isModalOpen, setModalOpen] = useState(isOpen);
