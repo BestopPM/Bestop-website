@@ -1,10 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import MaintenanceModal from "../MaintenanceModal/MaintenanceModal";
 
 const Tenant = () => {
   const [isMaintenanceModalOpen, setMaintenanceModalOpen] = useState(false);
   const [maintenanceFormData, setMaintenanceFormData] = useState(null);
+
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_ybsczy9",
+        "template_e1xmhdf",
+        form.current,
+        "aKD-Us6N3g93XuFJ8"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Thank you - your message has been received!");
+          handleCloseMaintenanceModal();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
 
   const handleOpenMaintenanceModal = () => {
     setMaintenanceModalOpen(true);
@@ -27,13 +50,6 @@ const Tenant = () => {
           <button onClick={handleOpenMaintenanceModal}>
             Maintenance Request
           </button>
-
-          {maintenanceFormData && maintenanceFormData.email && (
-            <div className="msg-box">
-              <b>{maintenaceFormData.email}</b> requested a{" "}
-              <b>{maintenanceFormData.digestType}</b> newsletter.
-            </div>
-          )}
 
           <MaintenanceModal
             isOpen={isMaintenanceModalOpen}
