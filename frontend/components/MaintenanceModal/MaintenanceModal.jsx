@@ -1,19 +1,21 @@
-import React, { useState, useEffect, useRef } from 'react'
-import Modal from '../modal/modal'
+import React, { useState, useEffect, useRef } from "react";
+import Modal from "../modal/modal";
 
 const initialMaintenanceModalData = {
-  name: '',
-  phone: '',
-  email: '',
-  address: '',
-  message: '',
+  name: "",
+  phone: "",
+  email: "",
+  address: "",
+  message: "",
 };
 
 const MaintenanceModal = ({ onSumbit, isOpen, onClose }) => {
   const focusInputRef = useRef(null);
   const [formState, setFormState] = useState(initialMaintenanceModalData);
 
-  {/* allows the modal to be fully rendered before focusing on the input */}
+  {
+    /* allows the modal to be fully rendered before focusing on the input */
+  }
   useEffect(() => {
     if (isOpen && focusInputRef.current) {
       setTimeout(() => {
@@ -35,12 +37,12 @@ const MaintenanceModal = ({ onSumbit, isOpen, onClose }) => {
     onSubmit(formState);
     setFormState(initialNewsletterModalData);
   };
-  
+
   return (
     <Modal hasCloseBtn={true} isOpen={isOpen} onClose={onClose}>
       <form onSubmit={handleSubmit}>
         {/* name */}
-        <div className='form-row'>
+        <div className="form-row">
           <input
             ref={focusInputRef}
             type="text"
@@ -54,7 +56,7 @@ const MaintenanceModal = ({ onSumbit, isOpen, onClose }) => {
           />
         </div>
         {/* phone */}
-        <div className='form-row'>
+        <div className="form-row">
           <input
             ref={focusInputRef}
             type="tel"
@@ -68,21 +70,21 @@ const MaintenanceModal = ({ onSumbit, isOpen, onClose }) => {
           />
         </div>
         {/* email */}
-        <div className='form-row'>
+        <div className="form-row">
           <input
             ref={focusInputRef}
             type="email"
             id="email"
             name="email"
             maxLength="50"
-            placeholder="Email Address*"
+            placeholder="Email*"
             value={formState.email}
             onChange={handleInputChange}
             required
           />
         </div>
         {/* address */}
-        <div className='form-row'>
+        <div className="form-row">
           <input
             ref={focusInputRef}
             type="text"
@@ -96,7 +98,7 @@ const MaintenanceModal = ({ onSumbit, isOpen, onClose }) => {
           />
         </div>
         {/* message */}
-        <div className='form-row'>
+        <div className="form-row">
           <textarea
             ref={focusInputRef}
             type="text"
@@ -115,7 +117,7 @@ const MaintenanceModal = ({ onSumbit, isOpen, onClose }) => {
         </div>
       </form>
     </Modal>
-  )
-}
+  );
+};
 
 export default MaintenanceModal;
