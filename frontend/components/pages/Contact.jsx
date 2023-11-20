@@ -59,7 +59,7 @@ const Contact = () => {
             name="email"
             className="contactInput"
             maxLength="50"
-            placeholder="Email Address*"
+            placeholder="Email*"
             required
           />
           {/* message */}
