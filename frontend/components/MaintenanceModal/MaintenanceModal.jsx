@@ -9,7 +9,7 @@ const initialMaintenanceModalData = {
   message: "",
 };
 
-const MaintenanceModal = ({ onSumbit, isOpen, onClose }) => {
+const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
   const focusInputRef = useRef(null);
   const [formState, setFormState] = useState(initialMaintenanceModalData);
 
@@ -35,7 +35,7 @@ const MaintenanceModal = ({ onSumbit, isOpen, onClose }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     onSubmit(formState);
-    setFormState(initialNewsletterModalData);
+    setFormState(initialMaintenanceModalData);
   };
 
   return (
