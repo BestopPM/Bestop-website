@@ -43,7 +43,7 @@ const Contact = () => {
             maxLength="50"
             placeholder="Name*"
             required
-          ></input>
+          />
           {/* phone */}
           <input
             type="tel"
@@ -52,7 +52,7 @@ const Contact = () => {
             pattern="\(?\d{3}\)?-? *\d{3}-? *-?\d{4}"
             placeholder="Phone Number*"
             required
-          ></input>
+          />
           {/* email */}
           <input
             type="email"
@@ -61,7 +61,7 @@ const Contact = () => {
             maxLength="50"
             placeholder="Email Address*"
             required
-          ></input>
+          />
           {/* message */}
           <textarea
             type="text"
