@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Modal from "../modal/modal";
+import emailjs from "emailjs-com";
 
 const initialMaintenanceModalData = {
   name: "",
@@ -12,6 +13,7 @@ const initialMaintenanceModalData = {
 const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
   const focusInputRef = useRef(null);
   const [formState, setFormState] = useState(initialMaintenanceModalData);
+  const form = useRef();
 
   {
     /* allows the modal to be fully rendered before focusing on the input */
@@ -32,15 +34,33 @@ const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
     }));
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const sendEmail = (e) => {
+    e.preventDefault();
     onSubmit(formState);
     setFormState(initialMaintenanceModalData);
+
+    emailjs
+      .sendForm(
+        "service_ybsczy9",
+        "template_e1xmhdf",
+        form.current,
+        "aKD-Us6N3g93XuFJ8"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Thank you - your message has been received!");
+          e.target.reset();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   return (
     <Modal hasCloseBtn={true} isOpen={isOpen} onClose={onClose}>
-      <form onSubmit={handleSubmit}>
+      <form ref={form} onSubmit={sendEmail}>
         {/* name */}
         <div className="form-row">
           <input
