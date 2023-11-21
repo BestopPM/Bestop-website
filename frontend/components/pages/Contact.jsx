@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import "../../stylesheet/styles.css";
 import emailjs from "emailjs-com";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   const form = useRef();
@@ -37,30 +38,30 @@ const Contact = () => {
           {/* name */}
           <input
             type="text"
-            name="user_name"
+            name="name"
             className="contactInput"
             maxLength="50"
             placeholder="Name*"
             required
-          ></input>
+          />
           {/* phone */}
           <input
             type="tel"
-            name="user_phone"
+            name="phone"
             className="contactInput"
             pattern="\(?\d{3}\)?-? *\d{3}-? *-?\d{4}"
             placeholder="Phone Number*"
             required
-          ></input>
+          />
           {/* email */}
           <input
             type="email"
-            name="user_email"
+            name="email"
             className="contactInput"
             maxLength="50"
-            placeholder="Email Address*"
+            placeholder="Email*"
             required
-          ></input>
+          />
           {/* message */}
           <textarea
             type="text"
@@ -70,7 +71,7 @@ const Contact = () => {
             maxLength="500"
             required
           ></textarea>
-          <button type="submit" id="contactButton" value="send">
+          <button type="submit" id="contactButton">
             Submit
           </button>
         </form>
@@ -92,9 +93,7 @@ const Contact = () => {
             <p>Mon-Fri: 9:00am - 6:00pm</p>
             <p>Sat-Sun: Closed</p>
           </section>
-          <a href="/tenant" id="maintenanceButton">
-            Maintenance Request
-          </a>
+          <Link to="/tenant"> Maintenance Request </Link>
         </div>
       </div>
     </>
