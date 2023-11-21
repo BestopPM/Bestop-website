@@ -7,6 +7,7 @@ const initialMaintenanceModalData = {
   phone: "",
   email: "",
   address: "",
+  other: "",
   model: "",
   serial: "",
   message: "",
@@ -128,41 +129,41 @@ const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
           <div className="check-list1">
             <div className="left-section">
               <div>
-                <input type="checkbox" name="concern1" value="plumbing" />
+                <input type="checkbox" name="concern" value="plumbing" />
                 <label for="plumbing">Plumbing</label>
               </div>
               <div className="plumbing-subsection">
                 <div>
-                  <input type="checkbox" name="concern2" value="stoppage" />
+                  <input type="checkbox" name="concern" value="stoppage" />
                   <label for="stoppage">Stoppage</label>
                 </div>
                 <div>
-                  <input type="checkbox" name="concern3" value="faucets" />
+                  <input type="checkbox" name="concern" value="faucets" />
                   <label for="faucets">Faucets</label>
                 </div>
                 <div>
-                  <input type="checkbox" name="concern4" value="Toilet" />
+                  <input type="checkbox" name="concern" value="toilet" />
                   <label for="Toilet">Toilet</label>
                 </div>
                 <div>
-                  <input type="checkbox" name="concern5" value="Leaks" />
+                  <input type="checkbox" name="concern" value="leaks" />
                   <label for="Leaks">Leaks</label>
                 </div>
               </div>
             </div>
             <div className="right-section">
               <div>
-                <input type="checkbox" name="concern6" value="heat-and-ac" />
+                <input type="checkbox" name="concern" value="heat-and-ac" />
                 <label for="heat-and-ac">Heating & Air Conditioning</label>
               </div>
               <div>
-                <input type="checkbox" name="concern7" value="electrical" />
+                <input type="checkbox" name="concern" value="electrical" />
                 <label for="electrical">Electrical</label>
               </div>
               <div>
-                <input type="checkbox" name="concern8" value="other" />
+                <input type="checkbox" name="concern" value="other" />
                 <label for="other">Other: </label>
-                <input type="text" name="other" maxLength="50"></input>
+                <input type="text" name="other-concerns" maxLength="50"></input>
               </div>
             </div>
           </div>
@@ -173,39 +174,39 @@ const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
           <div className="check-list2">
             <div className="left-section">
               <div>
-                <input type="checkbox" name="issue1" value="refrigerator" />
+                <input type="checkbox" name="issue" value="refrigerator" />
                 <label for="refrigerator">Refrigerator</label>
               </div>
               <div>
-                <input type="checkbox" name="issue2" value="stove" />
+                <input type="checkbox" name="issue" value="stove" />
                 <label for="stove">Stove</label>
               </div>
               <div>
-                <input type="checkbox" name="issue3" value="dish-washer" />
+                <input type="checkbox" name="issue" value="dish-washer" />
                 <label for="dish-washer">Dish Washer</label>
               </div>
               <div>
-                <input type="checkbox" name="issue4" value="garbage-disposal" />
+                <input type="checkbox" name="issue" value="garbage-disposal" />
                 <label for="garbage-disposal">Garbage Disposal</label>
               </div>
             </div>
             <div className="right-section">
               <div>
-                <input type="checkbox" name="issue5" value="range-hood" />
+                <input type="checkbox" name="issue" value="range-hood" />
                 <label for="range-hood">Range Hood</label>
               </div>
               <div>
-                <input type="checkbox" name="issue6" value="washer" />
+                <input type="checkbox" name="issue" value="washer" />
                 <label for="washer">Washer</label>
               </div>
               <div>
-                <input type="checkbox" name="issue7" value="dryer" />
+                <input type="checkbox" name="issue" value="dryer" />
                 <label for="dryer">Dryer</label>
               </div>
               <div>
-                <input type="checkbox" name="issue8" value="other" />
+                <input type="checkbox" name="issue" value="other" />
                 <label for="other">Other: </label>
-                <input type="text" name="other" maxLength="50"></input>
+                <input type="text" name="other-issues" maxLength="50"></input>
               </div>
             </div>
           </div>
