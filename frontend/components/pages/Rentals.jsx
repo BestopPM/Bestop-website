@@ -1,38 +1,50 @@
-import React from 'react'
-import '../../stylesheet/styles.css';
+import React from "react";
+import ShowingModal from "../ShowingModal/ShowingModal";
+import "../../stylesheet/styles.css";
 
 const Rentals = () => {
+  const [isShowingModalOpen, setShowingModalOpen] = useState(false);
 
-  const sendForm = (e) => {
-      e.preventDefault();
+  const handleOpenShowingModal = () => {
+    setShowingModalOpen(true);
+  };
 
-      emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
-          .then((result) => {
-              console.log(result.text);
-          }, (error) => {
-              console.log(error.text)
-          })
-  }
+  const handleCloseShowingModal = () => {
+    setShowingModalOpen(false);
+  };
 
-  return(
+  const handleFormSubmit = () => {
+    handleCloseShowingModal();
+  };
+
+  return (
     <>
-    <h1 id ='rentalMessage'>Available Rentals</h1>
-    <div id='contact'>
-      <div id='rental'>
-        <div id='rentalImage'>
-          <img src=''></img>
-        </div>
-        <div id='rentalInfo'>
-          <p>Rental Price: </p>
-          <p>Property Address: </p>
-          <a href='https://www.zillow.com/'>Additional Details</a>
-          <button id='showingButton' href='/rentalModal'>Request a Showing</button>
+      <h1 id="rentalMessage">Available Rentals</h1>
+      <div id="contact">
+        <div id="rental">
+          <div id="rentalImage">
+            <img src=""></img>
+          </div>
+          <div id="rentalInfo">
+            <p>Rental Price: </p>
+            <p>Property Address: </p>
+            <a href="https://www.zillow.com/">Additional Details</a>
+            <button id="showingButton" onClick={handleOpenShowingModal}>
+              Request a Showing
+            </button>
+            <ShowingModal
+              isOpen={isShowingModalOpen}
+              onSubmit={handleFormSubmit}
+              onClose={handleCloseShowingModal}
+            />
+          </div>
         </div>
       </div>
-    </div>
-    <a id='rentalApp' href='/rentalApp'>Rental Application</a>
+      <a id="rentalApp" href="/rentalApp">
+        Rental Application
+      </a>
     </>
-  )
-}
+  );
+};
 
 export default Rentals;
