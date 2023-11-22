@@ -7,7 +7,7 @@ const initialMaintenanceModalData = {
   phone: "",
   email: "",
   address: "",
-  concern:[],
+  concern: [],
   otherConcerns: "",
   issue: [],
   otherIssues: "",
@@ -163,7 +163,14 @@ const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
               <div>
                 <input type="checkbox" name="concern" value="other" />
                 <label htmlFor="other">Other: </label>
-                <input type="text" name="otherConcerns" maxLength="50"></input>
+                <input
+                  type="text"
+                  id="otherConcerns"
+                  name="otherConcerns"
+                  maxLength="50"
+                  value={formState.otherConcerns}
+                  onChange={handleInputChange}
+                ></input>
               </div>
             </div>
           </div>
@@ -206,7 +213,14 @@ const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
               <div>
                 <input type="checkbox" name="issue" value="other" />
                 <label htmlFor="other">Other: </label>
-                <input type="text" name="otherIssues" maxLength="50"></input>
+                <input
+                  type="text"
+                  id="otherIssues"
+                  name="otherIssues"
+                  maxLength="50"
+                  value={formState.otherIssues}
+                  onChange={handleInputChange}
+                ></input>
               </div>
             </div>
           </div>
