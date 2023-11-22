@@ -67,6 +67,7 @@ const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
   return (
     <Modal hasCloseBtn={true} isOpen={isOpen} onClose={onClose}>
       <form ref={form} onSubmit={sendEmail}>
+        <h1>Maintenance Request</h1>
         <section className="contact-info">
           <h3>Contact Information</h3>
           {/* name */}
