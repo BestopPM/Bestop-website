@@ -7,6 +7,10 @@ const initialMaintenanceModalData = {
   phone: "",
   email: "",
   address: "",
+  concern: [],
+  otherConcerns: "",
+  issue: [],
+  otherIssues: "",
   model: "",
   serial: "",
   message: "",
@@ -63,6 +67,7 @@ const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
   return (
     <Modal hasCloseBtn={true} isOpen={isOpen} onClose={onClose}>
       <form ref={form} onSubmit={sendEmail}>
+        <h1>Maintenance Request</h1>
         <section className="contact-info">
           <h3>Contact Information</h3>
           {/* name */}
@@ -82,7 +87,6 @@ const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
           {/* phone */}
           <div className="form-row">
             <input
-              ref={focusInputRef}
               type="tel"
               id="phone"
               name="phone"
@@ -96,7 +100,6 @@ const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
           {/* email */}
           <div className="form-row">
             <input
-              ref={focusInputRef}
               type="email"
               id="email"
               name="email"
@@ -110,7 +113,6 @@ const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
           {/* address */}
           <div className="form-row">
             <input
-              ref={focusInputRef}
               type="text"
               id="address"
               name="address"
@@ -128,41 +130,48 @@ const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
           <div className="check-list1">
             <div className="left-section">
               <div>
-                <input type="checkbox" name="concern1" value="plumbing" />
-                <label for="plumbing">Plumbing</label>
+                <input type="checkbox" name="concern" value="plumbing" />
+                <label htmlFor="plumbing">Plumbing</label>
               </div>
               <div className="plumbing-subsection">
                 <div>
-                  <input type="checkbox" name="concern2" value="stoppage" />
-                  <label for="stoppage">Stoppage</label>
+                  <input type="checkbox" name="concern" value="stoppage" />
+                  <label htmlFor="stoppage">Stoppage</label>
                 </div>
                 <div>
-                  <input type="checkbox" name="concern3" value="faucets" />
-                  <label for="faucets">Faucets</label>
+                  <input type="checkbox" name="concern" value="faucets" />
+                  <label htmlFor="faucets">Faucets</label>
                 </div>
                 <div>
-                  <input type="checkbox" name="concern4" value="Toilet" />
-                  <label for="Toilet">Toilet</label>
+                  <input type="checkbox" name="concern" value="toilet" />
+                  <label htmlFor="Toilet">Toilet</label>
                 </div>
                 <div>
-                  <input type="checkbox" name="concern5" value="Leaks" />
-                  <label for="Leaks">Leaks</label>
+                  <input type="checkbox" name="concern" value="leaks" />
+                  <label htmlFor="Leaks">Leaks</label>
                 </div>
               </div>
             </div>
             <div className="right-section">
               <div>
-                <input type="checkbox" name="concern6" value="heat-and-ac" />
-                <label for="heat-and-ac">Heating & Air Conditioning</label>
+                <input type="checkbox" name="concern" value="heat-and-ac" />
+                <label htmlFor="heat-and-ac">Heating & Air Conditioning</label>
               </div>
               <div>
-                <input type="checkbox" name="concern7" value="electrical" />
-                <label for="electrical">Electrical</label>
+                <input type="checkbox" name="concern" value="electrical" />
+                <label htmlFor="electrical">Electrical</label>
               </div>
               <div>
-                <input type="checkbox" name="concern8" value="other" />
-                <label for="other">Other: </label>
-                <input type="text" name="other" maxLength="50"></input>
+                <input type="checkbox" name="concern" value="other" />
+                <label htmlFor="other">Other: </label>
+                <input
+                  type="text"
+                  id="otherConcerns"
+                  name="otherConcerns"
+                  maxLength="50"
+                  value={formState.otherConcerns}
+                  onChange={handleInputChange}
+                ></input>
               </div>
             </div>
           </div>
@@ -173,39 +182,46 @@ const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
           <div className="check-list2">
             <div className="left-section">
               <div>
-                <input type="checkbox" name="issue1" value="refrigerator" />
-                <label for="refrigerator">Refrigerator</label>
+                <input type="checkbox" name="issue" value="refrigerator" />
+                <label htmlFor="refrigerator">Refrigerator</label>
               </div>
               <div>
-                <input type="checkbox" name="issue2" value="stove" />
-                <label for="stove">Stove</label>
+                <input type="checkbox" name="issue" value="stove" />
+                <label htmlFor="stove">Stove</label>
               </div>
               <div>
-                <input type="checkbox" name="issue3" value="dish-washer" />
-                <label for="dish-washer">Dish Washer</label>
+                <input type="checkbox" name="issue" value="dish-washer" />
+                <label htmlFor="dish-washer">Dish Washer</label>
               </div>
               <div>
-                <input type="checkbox" name="issue4" value="garbage-disposal" />
-                <label for="garbage-disposal">Garbage Disposal</label>
+                <input type="checkbox" name="issue" value="garbage-disposal" />
+                <label htmlFor="garbage-disposal">Garbage Disposal</label>
               </div>
             </div>
             <div className="right-section">
               <div>
-                <input type="checkbox" name="issue5" value="range-hood" />
-                <label for="range-hood">Range Hood</label>
+                <input type="checkbox" name="issue" value="range-hood" />
+                <label htmlFor="range-hood">Range Hood</label>
               </div>
               <div>
-                <input type="checkbox" name="issue6" value="washer" />
-                <label for="washer">Washer</label>
+                <input type="checkbox" name="issue" value="washer" />
+                <label htmlFor="washer">Washer</label>
               </div>
               <div>
-                <input type="checkbox" name="issue7" value="dryer" />
-                <label for="dryer">Dryer</label>
+                <input type="checkbox" name="issue" value="dryer" />
+                <label htmlFor="dryer">Dryer</label>
               </div>
               <div>
-                <input type="checkbox" name="issue8" value="other" />
-                <label for="other">Other: </label>
-                <input type="text" name="other" maxLength="50"></input>
+                <input type="checkbox" name="issue" value="other" />
+                <label htmlFor="other">Other: </label>
+                <input
+                  type="text"
+                  id="otherIssues"
+                  name="otherIssues"
+                  maxLength="50"
+                  value={formState.otherIssues}
+                  onChange={handleInputChange}
+                ></input>
               </div>
             </div>
           </div>
@@ -216,7 +232,6 @@ const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
           <div className="form-row">
             <label htmlFor="model">Model: </label>
             <input
-              ref={focusInputRef}
               type="text"
               id="model"
               name="model"
@@ -228,7 +243,6 @@ const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
           <div className="form-row">
             <label htmlFor="serial">Serial Number: </label>
             <input
-              ref={focusInputRef}
               type="text"
               id="serial"
               name="serial"
@@ -242,7 +256,6 @@ const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
         <section className="message">
           <h3>Message</h3>
           <textarea
-            ref={focusInputRef}
             type="text"
             id="message"
             name="message"
