@@ -266,12 +266,6 @@ const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
             required
           ></textarea>
         </section>
-        {/* attachments */}
-        <section className="attatchments">
-          <h3>Attachments</h3>
-          <p>Photos: </p>
-          <p>Videos: </p>
-        </section>
         {/* submit button */}
         <div className="form-row">
           <button type="submit">Submit</button>
