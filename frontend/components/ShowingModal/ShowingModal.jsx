@@ -55,17 +55,52 @@ const ShowingModal = ({ onSubmit, isOpen, onClose }) => {
 
   return (
     <Modal hasCloseBtn={true} isOpen={isOpen} onClose={onClose}>
-      <form ref={form} onSubmit={sendEmail}></form>
+      <form ref={form} onSubmit={sendEmail}>
       <div class='showing'>
-        <input placeholder="Name"></input>
-        <input placeholder="Phone"></input>
-        <input placeholder="Email"></input>
-        <textarea placeholder="Please list convenient times to view property"></textarea>
+        <input placeholder="Name"
+              ref={focusInputRef}
+              type="text"
+              id="name"
+              name="name"
+              maxLength="50"
+              value={formState.name}
+              onChange={handleInputChange}
+              required
+          ></input>
+        <input placeholder="Phone Number"
+          type="tel"
+          id="phone"
+          name="phone"
+          pattern="\(?\d{3}\)?-? *\d{3}-? *-?\d{4}"
+          value={formState.phone}
+          onChange={handleInputChange}
+          required
+        ></input>
+        <input placeholder="Email"
+          type="email"
+          id="email"
+          name="email"
+          maxLength="50"
+          value={formState.email}
+          onChange={handleInputChange}
+          required
+        ></input>
+        <textarea placeholder="Please list convenient times to view property"
+          ref={focusInputRef}
+          type="text"
+          id="textArea"
+          name="name"
+          maxLength="300"
+          value={formState.name}
+          onChange={handleInputChange}
+          required
+        ></textarea>
       </div>
      
       <button type="submit" id="contactButton">
             Submit
           </button>
+      </form>
     </Modal>
   );
 };
