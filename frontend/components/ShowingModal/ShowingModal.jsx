@@ -42,7 +42,7 @@ const ShowingModal = ({ onSubmit, isOpen, onClose }) => {
     emailjs
       .sendForm(
         "service_ybsczy9",
-        "template_e1xmhdf",
+        "template_o0qg5a4",
         form.current,
         "aKD-Us6N3g93XuFJ8"
       )
