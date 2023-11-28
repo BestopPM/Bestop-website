@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Modal from "../modal/modal";
 import emailjs from "emailjs-com";
+import "../../stylesheet/styles.css";
 
 const initialShowingModalData = {};
 
@@ -55,6 +56,16 @@ const ShowingModal = ({ onSubmit, isOpen, onClose }) => {
   return (
     <Modal hasCloseBtn={true} isOpen={isOpen} onClose={onClose}>
       <form ref={form} onSubmit={sendEmail}></form>
+      <div class='showing'>
+        <input placeholder="Name"></input>
+        <input placeholder="Phone"></input>
+        <input placeholder="Email"></input>
+        <textarea placeholder="Please list convenient times to view property"></textarea>
+      </div>
+     
+      <button type="submit" id="contactButton">
+            Submit
+          </button>
     </Modal>
   );
 };
