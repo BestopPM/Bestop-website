@@ -1,17 +1,17 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: './index.js',
+  entry: "./index.js",
   output: {
-    path: path.join(__dirname, '/build'),
-    publicPath: '/',
-    filename: 'bundle.js',
+    path: path.join(__dirname, "/build"),
+    publicPath: "/",
+    filename: "bundle.js",
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.html',
-    })
+      template: "./index.html",
+    }),
   ],
   module: {
     rules: [
@@ -19,40 +19,44 @@ module.exports = {
         test: /\.jsx?/,
         exclude: /node_modules\/(?!react-router-dom)/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
             sourceMap: false,
-            presets: ['@babel/preset-env', '@babel/preset-react']
-          }
-        }
+            presets: ["@babel/preset-env", "@babel/preset-react"],
+          },
+        },
+      },
+      {
+        test: /\.scss$/i,
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.(png|jpe?g|webp|gif|svg)$/i,
         use: [
           {
-            loader: 'file-loader'
+            loader: "file-loader",
           },
         ],
       },
-    ]
+    ],
   },
   devServer: {
     port: 8080,
     hot: true,
     historyApiFallback: true,
     static: {
-      directory: path.resolve(__dirname, 'client/components/public'),
-      publicPath: 'bundle.js',
+      directory: path.resolve(__dirname, "client/components/public"),
+      publicPath: "bundle.js",
     },
     proxy: {
-      '/api/**': 'http://localhost:3000',
+      "/api/**": "http://localhost:3000",
     },
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.css']
+    extensions: [".js", ".jsx", ".css"],
   },
-}
+};
