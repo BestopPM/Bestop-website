@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import { Route, Routes } from "react-router-dom";
+import "./App.scss"
 
 //import pages
 import About from "./pages/About";
@@ -8,6 +9,7 @@ import Contact from "./pages/Contact";
 import Owner from "./pages/Owner";
 import Tenant from "./pages/Tenant";
 import Rentals from "./pages/Rentals";
+
 
 const App = () => {
   return (

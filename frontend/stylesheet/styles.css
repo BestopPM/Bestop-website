@@ -124,3 +124,10 @@
     margin-left: 8vw;
     margin-top: 1.5vh;
 }
+
+.showing{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 10px;
+}

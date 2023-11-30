@@ -10,9 +10,10 @@ $font-weights: (
 
 body {
   background-color: $primary-color;
+  font-family: Roboto, sans-serif;
 }
 
-section {
+#root {
   background-color: #ffffff;
   width: 50vw;
   height: 90vh;

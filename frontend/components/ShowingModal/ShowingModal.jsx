@@ -1,8 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
 import Modal from "../modal/modal";
 import emailjs from "emailjs-com";
+import "../../stylesheet/styles.css";
 
-const initialShowingModalData = {};
+const initialShowingModalData = {
+  name: "",
+  phone: "",
+  email: "",
+  message: "",
+};
 
 const ShowingModal = ({ onSubmit, isOpen, onClose }) => {
   const focusInputRef = useRef(null);
@@ -36,7 +42,7 @@ const ShowingModal = ({ onSubmit, isOpen, onClose }) => {
     emailjs
       .sendForm(
         "service_ybsczy9",
-        "template_e1xmhdf",
+        "template_o0qg5a4",
         form.current,
         "aKD-Us6N3g93XuFJ8"
       )
@@ -54,7 +60,56 @@ const ShowingModal = ({ onSubmit, isOpen, onClose }) => {
 
   return (
     <Modal hasCloseBtn={true} isOpen={isOpen} onClose={onClose}>
-      <form ref={form} onSubmit={sendEmail}></form>
+      <form ref={form} onSubmit={sendEmail}>
+        <div className="showing">
+          <h3> Request a Showing </h3>
+          <input
+            placeholder="Name*"
+            ref={focusInputRef}
+            type="text"
+            id="name"
+            name="name"
+            maxLength="50"
+            value={formState.name}
+            onChange={handleInputChange}
+            required
+          ></input>
+          <input
+            placeholder="Phone Number*"
+            type="tel"
+            id="phone"
+            name="phone"
+            pattern="\(?\d{3}\)?-? *\d{3}-? *-?\d{4}"
+            value={formState.phone}
+            onChange={handleInputChange}
+            required
+          ></input>
+          <input
+            placeholder="Email*"
+            type="email"
+            id="email"
+            name="email"
+            maxLength="50"
+            value={formState.email}
+            onChange={handleInputChange}
+            required
+          ></input>
+          <textarea
+            placeholder="Please list convenient times to view the property*"
+            type="text"
+            id="textArea"
+            name="message"
+            maxLength="500"
+            value={formState.message}
+            onChange={handleInputChange}
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" id="contactButton">
+          Submit
+        </button>
+      </form>
     </Modal>
   );
 };
