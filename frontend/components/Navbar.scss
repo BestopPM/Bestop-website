@@ -1,0 +1,21 @@
+@import "App";
+
+.navbar__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: space-around;
+  background-color: $primary-color;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.navbar__item {
+  text-decoration: none;
+  color: $text-color;
+}
+
+.navbar__item:hover {
+  cursor: pointer;
+  background-color: $accent-color;
+}
