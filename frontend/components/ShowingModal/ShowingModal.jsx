@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Modal from "../modal/modal";
 import emailjs from "emailjs-com";
 import "../../stylesheet/styles.css";
+import { useNavigate } from 'react-router-dom';
 
 const initialShowingModalData = {
   name: "",
@@ -14,6 +15,7 @@ const ShowingModal = ({ onSubmit, isOpen, onClose }) => {
   const focusInputRef = useRef(null);
   const [formState, setFormState] = useState(initialShowingModalData);
   const form = useRef();
+  const navigate = useNavigate();
 
   {
     /* allows the modal to be fully rendered before focusing on the input */
@@ -49,7 +51,7 @@ const ShowingModal = ({ onSubmit, isOpen, onClose }) => {
       .then(
         (result) => {
           console.log(result.text);
-          alert("Thank you - your showing request has been received!");
+          navigate("/submitted")
           e.target.reset();
         },
         (error) => {
