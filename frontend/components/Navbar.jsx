@@ -5,28 +5,42 @@ import "./Navbar.scss";
 const Navbar = () => {
   return (
     <>
-      <nav className="navbar">
-        <div className="navbar__container">
-          <Link to="/" className="navbar__item">
-            Logo
-          </Link>
-          <Link to="/about" className="navbar__item">
-            About Us
-          </Link>
-          <Link to="/owner" className="navbar__item">
-            Owner Services
-          </Link>
-          <Link to="/tenant" className="navbar__item">
-            Tenant Services
-          </Link>
-          <Link to="/rentals" className="navbar__item">
-            Available Rentals
-          </Link>
-          <Link to="/contact" className="navbar__item">
-            Contact Us
+      <div className="pageHeader">
+        <div className="logo">
+          <Link to="/about" className="logo__link">
+            <h1>Logo</h1>
           </Link>
         </div>
-      </nav>
+        <nav className="navbar">
+          <ul className="navbar__container">
+            <li className="navbar__item">
+              <Link to="/about" className="navbar__link">
+                About Us
+              </Link>
+            </li>
+            <li className="navbar__item">
+              <Link to="/owner" className="navbar__link">
+                Owner Services
+              </Link>
+            </li>
+            <li className="navbar__item">
+              <Link to="/tenant" className="navbar__link">
+                Tenant Services
+              </Link>
+            </li>
+            <li className="navbar__item">
+              <Link to="/rentals" className="navbar__link">
+                Available Rentals
+              </Link>
+            </li>
+            <li className="navbar__item">
+              <Link to="/contact" className="navbar__link">
+                Contact Us
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </>
   );
 };

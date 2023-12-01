@@ -1,5 +1,11 @@
 @import "App";
 
+.pageHeader {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 .navbar__container {
   display: flex;
   flex-wrap: wrap;
@@ -8,14 +14,26 @@
   background-color: $primary-color;
   padding: 15px;
   border-radius: 5px;
+  font-weight: map-get($font-weights, medium);
+}
+
+.navbar__list {
+  list-style-type: none;
 }
 
 .navbar__item {
-  text-decoration: none;
-  color: $text-color;
+  display: inline-block;
 }
 
-.navbar__item:hover {
+.navbar__link {
+  text-decoration: none;
+  color: $text-color;
+  padding: 7px 15px;
+  transition: all 0.3s ease;
+  transition-property: background-color;
+}
+
+.navbar__link:hover {
   cursor: pointer;
   background-color: $accent-color;
 }
