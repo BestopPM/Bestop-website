@@ -3,16 +3,17 @@
 .pageHeader {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
+// control height and width of nav bar
 .navbar__container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: space-around;
   background-color: $primary-color;
-  padding: 15px;
+  padding: 8px 20px;
   border-radius: 5px;
   font-weight: map-get($font-weights, medium);
 }
@@ -25,11 +26,14 @@
   display: inline-block;
 }
 
+// control height and width of hover effect
 .navbar__link {
   text-decoration: none;
   color: $text-color;
-  padding: 7px 15px;
+  padding: 5px 15px;
   transition: all 0.3s ease;
+  display: inline-block;
+  border-radius: 5px;
   transition-property: background-color;
 }
 

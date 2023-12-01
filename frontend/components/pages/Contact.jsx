@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import "../../stylesheet/styles.css";
+// import "../../stylesheet/styles.css";
 import emailjs from "emailjs-com";
 import { Link } from "react-router-dom";
 
@@ -29,6 +29,7 @@ const Contact = () => {
 
   return (
     <>
+      <header className="header">Contact Us</header>
       <div id="message">
         <h1>Send Us A Message</h1>
       </div>

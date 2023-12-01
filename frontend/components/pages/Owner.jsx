@@ -3,9 +3,7 @@ import React from "react";
 const Owner = () => {
   return (
     <>
-      <header>
-        <h1>Owner Services</h1>
-      </header>
+      <header className="header">Owner Services</header>
 
       <main>
         <h2>Overview</h2>

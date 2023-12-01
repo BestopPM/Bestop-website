@@ -19,9 +19,9 @@ const Tenant = () => {
 
   return (
     <>
+      <header className="header">Tenant Services</header>
       <main>
         <section className="Tenant Services">
-          <h1>Tenant Services</h1>
           <button onClick={handleOpenMaintenanceModal}>
             Maintenance Request
           </button>

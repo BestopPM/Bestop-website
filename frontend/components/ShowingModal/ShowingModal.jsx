@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Modal from "../modal/modal";
 import emailjs from "emailjs-com";
-import "../../stylesheet/styles.css";
+// import "../../stylesheet/styles.css";
 
 const initialShowingModalData = {
   name: "",

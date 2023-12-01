@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import ShowingModal from "../ShowingModal/ShowingModal";
-import "../../stylesheet/styles.css";
+// import "../../stylesheet/styles.css";
 
 const Rentals = () => {
   const [isShowingModalOpen, setShowingModalOpen] = useState(false);
@@ -19,7 +19,7 @@ const Rentals = () => {
 
   return (
     <>
-      <h1 id="rentalMessage">Available Rentals</h1>
+      <header className="header">Available Rentals</header>
       <div id="contact">
         <div id="rental">
           <div id="rentalImage">
