@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Modal from "../modal/modal";
 import emailjs from "emailjs-com";
+import { useNavigate } from 'react-router-dom';
 
 const initialMaintenanceModalData = {
   name: "",
@@ -20,6 +21,7 @@ const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
   const focusInputRef = useRef(null);
   const [formState, setFormState] = useState(initialMaintenanceModalData);
   const form = useRef();
+  const navigate = useNavigate();
 
   {
     /* allows the modal to be fully rendered before focusing on the input */
@@ -55,7 +57,7 @@ const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
       .then(
         (result) => {
           console.log(result.text);
-          alert("Thank you - your maintenance request has been received!");
+          navigate("/submitted")
           e.target.reset();
         },
         (error) => {
