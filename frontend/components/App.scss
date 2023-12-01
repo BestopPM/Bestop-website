@@ -2,6 +2,7 @@ $primary-color: #c7d8c6;
 $accent-color: #9eb58e;
 $background-color: #b0c4a9;
 $text-color: #ffffff;
+$title-color: #746749;
 $font-weights: (
   "regular": 400,
   "medium": 500,
@@ -16,7 +17,7 @@ body {
 #root {
   background-color: #ffffff;
   width: 50vw;
-  height: 90vh;
+  min-height: 80vh;
   margin: auto;
   padding: 35px;
   border-radius: 5px;
@@ -28,4 +29,13 @@ body {
   padding: 5px 0px 5px 10px;
   border-radius: 5px;
   font-weight: map-get($font-weights, "medium");
+}
+
+.title {
+  color: $title-color;
+  margin: 5px 0px;
+}
+
+.content__container {
+  padding: 10px;
 }
