@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef} from "react";
+import { useNavigate } from 'react-router-dom';
 import Modal from "../modal/modal";
 import emailjs from "emailjs-com";
-import "../../stylesheet/styles.css";
-import { useNavigate } from 'react-router-dom';
 
 const initialShowingModalData = {
   name: "",
@@ -50,8 +49,8 @@ const ShowingModal = ({ onSubmit, isOpen, onClose }) => {
       )
       .then(
         (result) => {
+          navigate("/submitted");
           console.log(result.text);
-          navigate("/submitted")
           e.target.reset();
         },
         (error) => {

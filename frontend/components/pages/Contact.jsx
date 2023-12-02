@@ -1,10 +1,11 @@
 import React, { useRef } from "react";
-import "../../stylesheet/styles.css";
+import "./Contact.scss";
 import emailjs from "emailjs-com";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Contact = () => {
   const form = useRef();
+  const navigate = useNavigate();
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -17,8 +18,8 @@ const Contact = () => {
       )
       .then(
         (result) => {
+          navigate("/submitted");
           console.log(result.text);
-          alert("Thank you - your message has been received!");
           e.target.reset();
         },
         (error) => {
@@ -29,73 +30,85 @@ const Contact = () => {
 
   return (
     <>
-      <div id="message">
-        <h1>Send Us A Message</h1>
-      </div>
-      <div id="contact">
-        {/* contact form */}
-        <form id="box1" ref={form} onSubmit={sendEmail}>
-          {/* name */}
-          <input
-            type="text"
-            name="name"
-            className="contactInput"
-            maxLength="50"
-            placeholder="Name*"
-            required
-          />
-          {/* phone */}
-          <input
-            type="tel"
-            name="phone"
-            className="contactInput"
-            pattern="\(?\d{3}\)?-? *\d{3}-? *-?\d{4}"
-            placeholder="Phone Number*"
-            required
-          />
-          {/* email */}
-          <input
-            type="email"
-            name="email"
-            className="contactInput"
-            maxLength="50"
-            placeholder="Email*"
-            required
-          />
-          {/* message */}
-          <textarea
-            type="text"
-            name="message"
-            className="message"
-            placeholder="Message*"
-            maxLength="500"
-            required
-          ></textarea>
-          <button type="submit" id="contactButton">
-            Submit
-          </button>
-        </form>
-        <div id="box2">
-          <section>
-            <p>Mailing Address:</p>
-            <p>47000 Warm Springs Blvd Ste 274 Fremont, CA 94539</p>
-          </section>
-          <section>
-            <p>Email:</p>
-            <p>TBD</p>
-          </section>
-          <section>
-            <p>Phone:</p>
-            <p>(510) 936-8686</p>
-          </section>
-          <section>
-            <p>Business Hours:</p>
-            <p>Mon-Fri: 9:00am - 6:00pm</p>
-            <p>Sat-Sun: Closed</p>
-          </section>
+      <header className="header">Contact Us</header>
+
+      <main className="contactContent__container">
+
+      <section className="contactContent__container--left">
+          <h3 className="title">Contact Information</h3>
+          <p>
+            <strong>Mailing Address:</strong>
+            <br /> 47000 Warm Springs Blvd Ste 274
+            <br /> Fremont, CA 94539
+          </p>
+          <p>
+            <strong>Email: </strong>
+            ellencanhelp@gmail.com
+          </p>
+          <p>
+            <strong>Phone: </strong>
+            (510) 936-8686
+          </p>
+          <p>
+            <strong> Business Hours: </strong>
+            <br /> Mon-Fri: 9:00am - 6:00pm
+            <br />
+            Sat-Sun: Closed
+          </p>
           <Link to="/tenant"> Maintenance Request </Link>
-        </div>
-      </div>
+        </section>
+        
+        <section className="contactContent__container--right">
+          <h3 className="title">Send Us A Message</h3>
+          {/* contact form */}
+          <form
+            className="contactForm__container"
+            ref={form}
+            onSubmit={sendEmail}
+          >
+            {/* name */}
+            <input
+              type="text"
+              name="name"
+              className="contactForm__input"
+              maxLength="50"
+              placeholder="Name*"
+              required
+            />
+            {/* phone */}
+            <input
+              type="tel"
+              name="phone"
+              className="contactForm__input"
+              pattern="\(?\d{3}\)?-? *\d{3}-? *-?\d{4}"
+              placeholder="Phone Number*"
+              required
+            />
+            {/* email */}
+            <input
+              type="email"
+              name="email"
+              className="contactForm__input"
+              maxLength="50"
+              placeholder="Email*"
+              required
+            />
+            {/* message */}
+            <textarea
+              type="text"
+              name="message"
+              className="contactForm__message"
+              placeholder="Message*"
+              maxLength="500"
+              required
+            ></textarea>
+            <button type="submit" className="contactForm__button">
+              Submit
+            </button>
+          </form>
+        </section>
+
+      </main>
     </>
   );
 };

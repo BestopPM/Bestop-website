@@ -56,8 +56,8 @@ const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
       )
       .then(
         (result) => {
-          console.log(result.text);
           navigate("/submitted")
+          console.log(result.text);
           e.target.reset();
         },
         (error) => {

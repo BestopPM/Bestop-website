@@ -3,12 +3,10 @@ import React from "react";
 const Owner = () => {
   return (
     <>
-      <header>
-        <h1>Owner Services</h1>
-      </header>
+      <header className="header">Owner Services</header>
 
       <main>
-        <h2>Overview</h2>
+        <h3 className="title">Overview</h3>
         <p>
           BESTOP PROPERTY MANAGEMENT takes a customized, individual approach to
           working with property owners. We conduct regular visits, ensuring we

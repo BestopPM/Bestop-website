@@ -1,12 +1,12 @@
 import React from 'react'
-import "../../stylesheet/styles.css";
 
 const Submit = () => {
     return (
-        <>
-        <h1 id='submitted'>Your request has been recieved. A property manager should be in contact within 24 hours.</h1>
-        </>
+        <main>
+            <header className='header'>Message Submitted</header>
+            <h3 className='submit_text'> Your message has been received. A property manager should reach out to you within 24 business hours.</h3>
+        </main>
     )
 }
 
-export default Submit
+export default Submit;

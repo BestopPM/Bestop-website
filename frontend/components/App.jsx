@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import { Route, Routes } from "react-router-dom";
+import "./App.scss"
 
 //import pages
 import About from "./pages/About";
@@ -10,11 +11,13 @@ import Tenant from "./pages/Tenant";
 import Rentals from "./pages/Rentals";
 import Submit from "./pages/Submit";
 
+
 const App = () => {
   return (
     <>
       <Navbar />
       <Routes>
+      <Route path="/" element={<About />} />
         <Route path="/about" element={<About />} />
         <Route path="/owner" element={<Owner />} />
         <Route path="/tenant" element={<Tenant />} />
