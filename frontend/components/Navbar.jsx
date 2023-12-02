@@ -1,14 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.scss";
+import logo from "./assets/BesTopLogo.svg";
 
 const Navbar = () => {
   return (
     <>
       <div className="pageHeader">
-        <div className="logo">
+        <div className="logo logo__container">
           <Link to="/about" className="logo__link">
-            <h1>Logo</h1>
+            <img src={logo} alt="BesTop Logo" className="logo__img"/>
           </Link>
         </div>
         <nav className="navbar">

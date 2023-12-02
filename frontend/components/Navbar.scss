@@ -2,8 +2,20 @@
 
 .pageHeader {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.logo__container {
+  width: 170px;
+}
+
+// Make sure the logo image doesn't exceed its container
+.logo__img {
+  max-width: 100%;
+  height: auto;
 }
 
 // control height and width of nav bar
@@ -11,15 +23,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: space-around;
   background-color: $primary-color;
   padding: 8px 20px;
   border-radius: 5px;
   font-weight: map-get($font-weights, medium);
-}
-
-.navbar__list {
-  list-style-type: none;
 }
 
 .navbar__item {
