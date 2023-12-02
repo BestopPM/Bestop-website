@@ -49,8 +49,8 @@ const ShowingModal = ({ onSubmit, isOpen, onClose }) => {
       )
       .then(
         (result) => {
+          navigate("/submitted");
           console.log(result.text);
-          navigate("/submitted")
           e.target.reset();
         },
         (error) => {

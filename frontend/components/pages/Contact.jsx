@@ -1,10 +1,11 @@
 import React, { useRef } from "react";
 import "./Contact.scss";
 import emailjs from "emailjs-com";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Contact = () => {
   const form = useRef();
+  const navigate = useNavigate();
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -17,8 +18,8 @@ const Contact = () => {
       )
       .then(
         (result) => {
+          navigate("/submitted");
           console.log(result.text);
-          alert("Thank you - your message has been received!");
           e.target.reset();
         },
         (error) => {
