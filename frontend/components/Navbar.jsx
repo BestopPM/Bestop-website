@@ -6,13 +6,13 @@ import logo from "./assets/BesTopLogo.svg";
 const Navbar = () => {
   return (
     <>
-      <div className="pageHeader pageHeader__container">
-        <div className="logo pageHeader__container--left">
-          <Link to="/about" className="logo__link">
+      <div className="pageHeader__container">
+        <div className="pageHeader__container--left">
+          <Link to="/about">
             <img src={logo} alt="BesTop Logo" className="logo__img"/>
           </Link>
         </div>
-        <nav className="navbar pageHeader__container--right">
+        <nav className="pageHeader__container--right">
           <ul className="navbar__container">
             <li className="navbar__item">
               <Link to="/about" className="navbar__link">

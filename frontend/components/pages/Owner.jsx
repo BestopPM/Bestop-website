@@ -5,7 +5,7 @@ const Owner = () => {
     <>
       <header className="header">Owner Services</header>
 
-      <main className="ownerContent ownerContent__container">
+      <main>
         <h3 className="title">Overview</h3>
         <p>
           BESTOP PROPERTY MANAGEMENT takes a customized, individual approach to
