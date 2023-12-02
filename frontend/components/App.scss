@@ -1,8 +1,8 @@
-$primary-color: #c7d8c6;
-$accent-color: #9eb58e;
-$background-color: #b0c4a9;
+$primary-color: #6A7CCC;
+$accent-color: #35489B;
+$background-color: #6A7CCC; 
 $text-color: #ffffff;
-$title-color: #746749;
+$title-color: #445bbf;
 $font-weights: (
   "regular": 400,
   "medium": 500,
@@ -16,10 +16,10 @@ body {
 
 #root {
   background-color: #ffffff;
-  width: 50vw;
+  width: 70vw;
   min-height: 80vh;
   margin: auto;
-  padding: 35px;
+  padding: 25px 35px;
   border-radius: 5px;
 }
 

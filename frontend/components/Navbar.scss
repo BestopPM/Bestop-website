@@ -9,13 +9,19 @@
 }
 
 .logo__container {
-  width: 170px;
+  width: 180px;
+  margin-right: 15px;
 }
 
 // Make sure the logo image doesn't exceed its container
 .logo__img {
   max-width: 100%;
   height: auto;
+}
+
+// Make sure navbar fill white space in flex-box
+.navbar {
+  flex-grow: 2;
 }
 
 // control height and width of nav bar
