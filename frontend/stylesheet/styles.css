@@ -16,17 +16,6 @@
     align-items: center;
 }
 
-#box1 {
-    border: solid black;
-    border-radius: 10px;
-    padding: 2em;
-    min-width: 25em;
-    align-items: center;
-    overflow-x: none;
-    overflow-y: scroll;
-    line-height: 4px;
-}
-
 .contactInput {
     display: flex;
     width: 20vw;

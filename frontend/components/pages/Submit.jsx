@@ -1,5 +1,4 @@
 import React from 'react'
-import "../../stylesheet/styles.css";
 
 const Submit = () => {
     return (
