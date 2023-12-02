@@ -32,8 +32,33 @@ const Contact = () => {
     <>
       <header className="header">Contact Us</header>
 
-      <main className="contactContent contactContent__container">
-        <section className="contactContent__container--left">
+      <main className="contactContent__container">
+
+      <section className="contactContent__container--left">
+          <h3 className="title">Contact Information</h3>
+          <p>
+            <strong>Mailing Address:</strong>
+            <br /> 47000 Warm Springs Blvd Ste 274
+            <br /> Fremont, CA 94539
+          </p>
+          <p>
+            <strong>Email: </strong>
+            ellencanhelp@gmail.com
+          </p>
+          <p>
+            <strong>Phone: </strong>
+            (510) 936-8686
+          </p>
+          <p>
+            <strong> Business Hours: </strong>
+            <br /> Mon-Fri: 9:00am - 6:00pm
+            <br />
+            Sat-Sun: Closed
+          </p>
+          <Link to="/tenant"> Maintenance Request </Link>
+        </section>
+        
+        <section className="contactContent__container--right">
           <h3 className="title">Send Us A Message</h3>
           {/* contact form */}
           <form
@@ -72,7 +97,7 @@ const Contact = () => {
             <textarea
               type="text"
               name="message"
-              className="contactForm__input"
+              className="contactForm__message"
               placeholder="Message*"
               maxLength="500"
               required
@@ -83,29 +108,6 @@ const Contact = () => {
           </form>
         </section>
 
-        <section className="contactContent__container--right">
-          <h3 className="title">Contact Information</h3>
-          <p>
-            <strong>Mailing Address:</strong>
-            <br /> 47000 Warm Springs Blvd Ste 274
-            <br /> Fremont, CA 94539
-          </p>
-          <p>
-            <strong>Email: </strong>
-            ellencanhelp@gmail.com
-          </p>
-          <p>
-            <strong>Phone: </strong>
-            (510) 936-8686
-          </p>
-          <p>
-            <strong> Business Hours: </strong>
-            <br /> Mon-Fri: 9:00am - 6:00pm
-            <br />
-            Sat-Sun: Closed
-          </p>
-          <Link to="/tenant"> Maintenance Request </Link>
-        </section>
       </main>
     </>
   );

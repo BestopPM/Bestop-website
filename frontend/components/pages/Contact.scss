@@ -1,18 +1,57 @@
+@import "../App";
+
 .contactContent__container {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
   align-items: flex-start;
-  column-gap: 37%;
-
+  column-gap: 32%;
 }
 
 .contactForm__container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  margin-top: 1.25em;
+}
+
+.contactForm__input,
+.contactForm__message {
+  padding: 5px 10px;
+  font-family: Roboto, sans-serif;
+  min-width: 20vw;
 }
 
 .contactForm__input {
-  border-radius: 5px;
+  min-height: 2vh;
+  margin-bottom: 8px;
 }
 
+.contactForm__message {
+  overflow: auto;
+  min-height: 15vh;
+}
+
+.contactForm__button {
+  font-size: 1em;
+  min-height: 4vh;
+  min-width: 20vw;
+  margin-top: 10px;
+  color: $text-color;
+  background-color: $button-color;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 3px 3px 15px 1px rgba(0, 0, 0, 0.24); 
+  transition: all 0.3s ease;
+  transition-property: opacity, box-shadow;
+}
+
+.contactForm__button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.contactForm__button:active {
+  transform: scale(0.98); 
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.24); 
+}
