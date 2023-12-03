@@ -230,7 +230,7 @@ const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
         </section>
         {/* model and serial # */}
         <section className="model-and-serial">
-          <h3>Model and Serial Number of Appliance</h3>
+          <h3>Appliance Details</h3>
           <div className="form-row">
             <label htmlFor="model">Model: </label>
             <input
