@@ -1,0 +1,17 @@
+.aboutContent__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.aboutContent__container--bottom {
+  width: 1090px;
+}
+
+.about__img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 16px;
+  border-radius: 5px;
+}
