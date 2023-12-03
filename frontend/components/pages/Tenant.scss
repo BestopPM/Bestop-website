@@ -27,7 +27,7 @@
   border: none;
   border-radius: 5px;
   transition: all 0.3s ease;
-  transition-property: filter;
+  transition-property: filter, transform;
   font-weight: map-get($font-weights, medium);
   font-family: Roboto, sans-serif;
 
