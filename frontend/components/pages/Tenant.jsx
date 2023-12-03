@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import MaintenanceModal from "../MaintenanceModal/MaintenanceModal";
+import "./Tenant.scss"
 
 const Tenant = () => {
   const [isMaintenanceModalOpen, setMaintenanceModalOpen] = useState(false);
@@ -20,9 +21,25 @@ const Tenant = () => {
   return (
     <>
       <header className="header">Tenant Services</header>
-      <main>
-        <section className="Tenant Services">
-          <button onClick={handleOpenMaintenanceModal}>
+      <main className="tenantContent__container">
+        <section className="tenantContent__container--left">
+          <h3 className="title">Tenant Resources</h3>
+          <ul className="tenantResources">
+            <li className="tenantResources__item">Move Out Notice</li>
+            <li className="tenantResources__item">Move Out Cleaning Instructions</li>
+            <li className="tenantResources__item">Move Out Forwarding Address</li>
+          </ul>
+        </section>
+        <section className="tenantContent__container--right">
+          <h3 className="title">Maintenance Request</h3>
+          <p>
+            Please describe the problem in as much detail as possible.
+            <br />
+            Once submitted, a property manager should contact you
+            within 24 hours.
+          </p>
+
+          <button onClick={handleOpenMaintenanceModal} className="maintenanceRequest__button">
             Maintenance Request
           </button>
 
@@ -32,22 +49,9 @@ const Tenant = () => {
             onClose={handleCloseMaintenanceModal}
           />
 
-          <p>
-            Please describe the problem in as much detail as possible. Attach
-            photos or video can help property manager hire the right vendor for
-            the repair job. Once submitted, property manager should contact you
-            within 24 hours.
-          </p>
-          <Link to="/contact"> Contact Us </Link>
-        </section>
-
-        <section className="Tenant Resources">
-          <h1>Tenant Services</h1>
-          <ul>
-            <li>Move Out Notice</li>
-            <li>Move Out Cleaning Instructions</li>
-            <li>Move Out Forwarding Address</li>
-          </ul>
+          <div>
+            <Link to="/contact"> Contact Us </Link>
+          </div>
         </section>
       </main>
     </>
