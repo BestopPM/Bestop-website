@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import ShowingModal from "../ShowingModal/ShowingModal";
-// import "../../stylesheet/styles.css";
+import propertyPhoto from "../assets/property-photo.jpeg";
+import "./Rentals.scss";
 
 const Rentals = () => {
   const [isShowingModalOpen, setShowingModalOpen] = useState(false);
@@ -20,29 +21,70 @@ const Rentals = () => {
   return (
     <>
       <header className="header">Available Rentals</header>
-      <div id="contact">
-        <div id="rental">
-          <div id="rentalImage">
-            <img src=""></img>
+      <main>
+        <h3 className="title">Property Information</h3>
+        <section className="rentalContent__container">
+          <div className="rentalContent__container--left">
+            <h4 style={{ fontWeight: "500"}}>
+              123 Happy Lane, Happyville, CA 80085
+            </h4>
+            <img
+              src={propertyPhoto}
+              alt="propertyImage"
+              className="property__img"
+            ></img>
           </div>
-          <div id="rentalInfo">
-            <p>Rental Price: </p>
-            <p>Property Address: </p>
-            <a href="https://www.zillow.com/">Additional Details</a>
-            <button id="showingButton" onClick={handleOpenShowingModal}>
-              Request a Showing
-            </button>
-            <ShowingModal
-              isOpen={isShowingModalOpen}
-              onSubmit={handleFormSubmit}
-              onClose={handleCloseShowingModal}
-            />
+
+          <div className="rentalContent__container--right">
+            <div>
+              <p>
+                <span style={{ fontWeight: "700", fontSize: "1.5rem" }}>
+                  $2750
+                </span>{" "}
+                per month
+              </p>
+              <p>
+                2 BR &nbsp;&nbsp; <span style={{ color: "#a9a9a9" }}>|</span>
+                &nbsp;&nbsp; 2 BA &nbsp;&nbsp;{" "}
+                <span style={{ color: "#a9a9a9" }}>|</span>&nbsp;&nbsp; 341 SF
+              </p>
+            </div>
+
+            <div>
+                <button
+                  className="showingRequest__button"
+                  onClick={handleOpenShowingModal}
+                >
+                  Request a Showing
+                </button>
+                <ShowingModal
+                  isOpen={isShowingModalOpen}
+                  onSubmit={handleFormSubmit}
+                  onClose={handleCloseShowingModal}
+                />
+            </div>
+
+            <div>
+              <a id="rentalApp" href="/rentalApp">
+                Rental Application
+              </a>
+            </div>
+
+            <div>
+              <p>Bright home with tons of storage near Woodside Road!</p>
+              <p style={{ color: "green" }}>
+                <strong>Available now</strong>
+              </p>
+              <p>No pets allowed</p>
+            </div>
+
+            <div>
+              <a href="https://www.zillow.com/">Full Details on Zillow</a>
+            </div>
+
           </div>
-        </div>
-      </div>
-      <a id="rentalApp" href="/rentalApp">
-        Rental Application
-      </a>
+        </section>
+      </main>
     </>
   );
 };

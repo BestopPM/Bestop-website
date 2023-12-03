@@ -15,25 +15,25 @@ const Owner = () => {
         </p>
 
         <section>
-          <p>PROPERTY MANAGEMENT including:</p>
+          <p>PROPERTY MANAGEMENT includes:</p>
           <ul>
             <li>
               Initial inspection & coordination of work required to get property
               “Rent Ready”
             </li>
-            <li>Determine rental price based on market analysis</li>
+            <li>Determining rental price based on market analysis</li>
             <li>Advertising</li>
             <li>Showing</li>
             <li>Tenant screening and Selection</li>
             <li>Move-in Inspection of the property</li>
-            <li>Execution of Rental/Lease Agreement</li>
+            <li>Executing Rental/Lease Agreement</li>
             <li>Rent Collection</li>
             <li>Property Repair and Maintenance</li>
             <li>
               Service Legal Notices, Process Evictions and Collections as
               Required
             </li>
-            <li>Provide Monthly and Yearly Financial Statement</li>
+            <li>Providing Monthly and Yearly Financial Statement</li>
           </ul>
         </section>
       </main>

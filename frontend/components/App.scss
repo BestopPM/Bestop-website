@@ -13,6 +13,7 @@ $font-weights: (
 body {
   background-color: $background-color;
   font-family: Roboto, sans-serif;
+  line-height: 140%;
 }
 
 main {
@@ -39,6 +40,6 @@ main {
 
 .title {
   color: $title-color;
-  margin: 5px 0px;
+  margin: 0px 0px;
 }
 
