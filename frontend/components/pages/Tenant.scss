@@ -2,9 +2,10 @@
 
 .tenantContent__container {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  column-gap: 33.5%;
+  justify-content: space-between;
+  row-gap: 40px;
 }
 
 .tenantResources {
