@@ -1,5 +1,5 @@
 import React from 'react'
-import aboutPhoto from "../assets/about-photo.webp";
+import aboutPhoto from "../assets/aboutPhoto.webp";
 import "./About.scss"
 
 const About = () => {
