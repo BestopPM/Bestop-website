@@ -25,9 +25,17 @@ const Tenant = () => {
         <section className="tenantContent__container--left">
           <h3 className="title">Tenant Resources</h3>
           <ul className="tenantResources">
-            <li className="tenantResources__item">Move Out Notice</li>
-            <li className="tenantResources__item">Move Out Cleaning Instructions</li>
-            <li className="tenantResources__item">Move Out Forwarding Address</li>
+            <li className="tenantResources__item">
+              <a className="tenantResources__link" href="/moveOutNotice">Move Out Notice</a>
+            </li>
+            <li className="tenantResources__item">
+              <a className="tenantResources__link" href="/cleaningInstructions">Move Out Cleaning Instructions 
+              </a>
+            </li>
+            <li className="tenantResources__item">
+              <a className="tenantResources__link" href="/forwardingAddress">Move Out Forwarding Address
+              </a>
+            </li>
           </ul>
         </section>
         <section className="tenantContent__container--right">
