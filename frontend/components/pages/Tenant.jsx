@@ -22,7 +22,7 @@ const Tenant = () => {
     <>
       <header className="header">Tenant Services</header>
       <main className="tenantContent__container">
-        <section className="tenantContent__container--left">
+        <section className="tenantContent__container--top">
           <h3 className="title">Tenant Resources</h3>
           <ul className="tenantResources">
             <li className="tenantResources__item">
@@ -38,7 +38,7 @@ const Tenant = () => {
             </li>
           </ul>
         </section>
-        <section className="tenantContent__container--right">
+        <section className="tenantContent__container--bottom">
           <h3 className="title">Maintenance Request</h3>
           <p>
             Please describe the problem in as much detail as possible.
