@@ -4,13 +4,13 @@ import { Route, Routes } from "react-router-dom";
 import "./App.scss"
 
 //import pages
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Owner from "./pages/Owner";
-import Tenant from "./pages/Tenant";
-import Rentals from "./pages/Rentals";
-import Submit from "./pages/Submit";
-import RentalsNone from "./pages/RentalsNone";
+import About from "./Pages/About";
+import Contact from "./Pages/Contact";
+import Owner from "./Pages/Owner";
+import Tenant from "./Pages/Tenant";
+import Rentals from "./Pages/Rentals";
+import Submit from "./Pages/Submit";
+import RentalsNone from "./Pages/RentalsNone";
 
 
 const App = () => {
