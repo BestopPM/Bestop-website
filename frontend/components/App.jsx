@@ -10,6 +10,7 @@ import Owner from "./pages/Owner";
 import Tenant from "./pages/Tenant";
 import Rentals from "./pages/Rentals";
 import Submit from "./pages/Submit";
+import RentalsNone from "./pages/RentalsNone";
 
 
 const App = () => {
