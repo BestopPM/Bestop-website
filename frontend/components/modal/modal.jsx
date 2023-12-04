@@ -1,4 +1,5 @@
 import React, {useState, useEffect, useRef } from 'react'
+import "./Modal.scss"
 
 const Modal = ({ isOpen, hasCloseBtn, onClose, children }) => {
   const [isModalOpen, setModalOpen] = useState(isOpen);
@@ -37,8 +38,8 @@ const Modal = ({ isOpen, hasCloseBtn, onClose, children }) => {
   return (
     <dialog ref={modalRef} onKeyDown={handleKeyDown} className="modal">
       {hasCloseBtn && (
-        <button className="modal-close-btn" onClick={handleCloseModal}>
-          Close
+        <button className="modal__closeBtn" onClick={handleCloseModal}>
+          X
         </button>
       )}
       {children}
