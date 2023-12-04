@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Modal from "../modal/modal";
 import emailjs from "emailjs-com";
 import { useNavigate } from 'react-router-dom';
+import "./MaintenanceModal.scss"
 
 const initialMaintenanceModalData = {
   name: "",
@@ -68,16 +69,15 @@ const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
 
   return (
     <Modal hasCloseBtn={true} isOpen={isOpen} onClose={onClose}>
-      <form ref={form} onSubmit={sendEmail}>
-        <h1>Maintenance Request</h1>
-        <section className="contact-info">
-          <h3>Contact Information</h3>
-          {/* name */}
-          <div className="form-row">
+        <form ref={form} onSubmit={sendEmail} className="maintenanceForm__container">
+          <h1 className="title" style={{textAlign: "center"}}>Maintenance Request</h1>
+          <section className="maintenance__section">
+            <h3 className="title">Contact Information</h3>
+            {/* name */}
             <input
               ref={focusInputRef}
               type="text"
-              id="name"
+              className="contact__input"
               name="name"
               maxLength="50"
               placeholder="Name*"
@@ -85,12 +85,10 @@ const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
               onChange={handleInputChange}
               required
             />
-          </div>
-          {/* phone */}
-          <div className="form-row">
+            {/* phone */}
             <input
               type="tel"
-              id="phone"
+              className="contact__input"
               name="phone"
               pattern="\(?\d{3}\)?-? *\d{3}-? *-?\d{4}"
               placeholder="Phone Number*"
@@ -98,12 +96,10 @@ const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
               onChange={handleInputChange}
               required
             />
-          </div>
-          {/* email */}
-          <div className="form-row">
+            {/* email */}
             <input
               type="email"
-              id="email"
+              className="contact__input"
               name="email"
               maxLength="50"
               placeholder="Email*"
@@ -111,12 +107,10 @@ const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
               onChange={handleInputChange}
               required
             />
-          </div>
-          {/* address */}
-          <div className="form-row">
+            {/* address */}
             <input
               type="text"
-              id="address"
+              className="contact__input"
               name="address"
               maxLength="50"
               placeholder="Home Address*"
@@ -124,155 +118,153 @@ const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
               onChange={handleInputChange}
               required
             />
-          </div>
-        </section>
-        {/* areas of concern */}
-        <section className="areas-of-concern">
-          <h3>Areas of Concern:</h3>
-          <div className="check-list1">
-            <div className="left-section">
-              <div>
-                <input type="checkbox" name="concern" value="plumbing" />
-                <label htmlFor="plumbing">Plumbing</label>
+          </section>
+          {/* areas of concern */}
+          <section className="maintenance__section">
+            <h3 className="title">Areas of Concern:</h3>
+            <div className="concerns__container">
+              <div className="concerns__container--left">
+                <div>
+                  <input type="checkbox" name="concern" value="plumbing" />
+                  <label htmlFor="plumbing" className="plumbing">Plumbing</label>
+                </div>
+                <div className="plumbing__subsection">
+                  <div>
+                    <input type="checkbox" name="concern" value="stoppage" />
+                    <label htmlFor="stoppage">Stoppage</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="concern" value="faucets" />
+                    <label htmlFor="faucets">Faucets</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="concern" value="toilet" />
+                    <label htmlFor="Toilet">Toilet</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="concern" value="leaks" />
+                    <label htmlFor="Leaks">Leaks</label>
+                  </div>
+                </div>
               </div>
-              <div className="plumbing-subsection">
+              <div className="concerns__container--right">
                 <div>
-                  <input type="checkbox" name="concern" value="stoppage" />
-                  <label htmlFor="stoppage">Stoppage</label>
+                  <input type="checkbox" name="concern" value="heat-and-ac" />
+                  <label htmlFor="heat-and-ac">Heating & Air Conditioning</label>
                 </div>
                 <div>
-                  <input type="checkbox" name="concern" value="faucets" />
-                  <label htmlFor="faucets">Faucets</label>
+                  <input type="checkbox" name="concern" value="electrical" />
+                  <label htmlFor="electrical">Electrical</label>
                 </div>
                 <div>
-                  <input type="checkbox" name="concern" value="toilet" />
-                  <label htmlFor="Toilet">Toilet</label>
-                </div>
-                <div>
-                  <input type="checkbox" name="concern" value="leaks" />
-                  <label htmlFor="Leaks">Leaks</label>
+                  <input type="checkbox" name="concern" value="other" />
+                  <label htmlFor="other">Other: </label>
+                  <input
+                    type="text"
+                    className="other__input"
+                    name="otherConcerns"
+                    maxLength="50"
+                    value={formState.otherConcerns}
+                    onChange={handleInputChange}
+                  ></input>
                 </div>
               </div>
             </div>
-            <div className="right-section">
-              <div>
-                <input type="checkbox" name="concern" value="heat-and-ac" />
-                <label htmlFor="heat-and-ac">Heating & Air Conditioning</label>
+          </section>
+          {/* appliance issues */}
+          <section className="maintenance__section">
+            <h3 className="title">Appliance Issues:</h3>
+            <div className="issues__container">
+              <div className="issues__container--left">
+                <div>
+                  <input type="checkbox" name="issue" value="refrigerator" />
+                  <label htmlFor="refrigerator">Refrigerator</label>
+                </div>
+                <div>
+                  <input type="checkbox" name="issue" value="stove" />
+                  <label htmlFor="stove">Stove</label>
+                </div>
+                <div>
+                  <input type="checkbox" name="issue" value="dish-washer" />
+                  <label htmlFor="dish-washer">Dish Washer</label>
+                </div>
+                <div>
+                  <input type="checkbox" name="issue" value="garbage-disposal" />
+                  <label htmlFor="garbage-disposal">Garbage Disposal</label>
+                </div>
               </div>
-              <div>
-                <input type="checkbox" name="concern" value="electrical" />
-                <label htmlFor="electrical">Electrical</label>
-              </div>
-              <div>
-                <input type="checkbox" name="concern" value="other" />
-                <label htmlFor="other">Other: </label>
-                <input
-                  type="text"
-                  id="otherConcerns"
-                  name="otherConcerns"
-                  maxLength="50"
-                  value={formState.otherConcerns}
-                  onChange={handleInputChange}
-                ></input>
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* appliance issues */}
-        <section className="appliance-issues">
-          <h3>Appliance Issues:</h3>
-          <div className="check-list2">
-            <div className="left-section">
-              <div>
-                <input type="checkbox" name="issue" value="refrigerator" />
-                <label htmlFor="refrigerator">Refrigerator</label>
-              </div>
-              <div>
-                <input type="checkbox" name="issue" value="stove" />
-                <label htmlFor="stove">Stove</label>
-              </div>
-              <div>
-                <input type="checkbox" name="issue" value="dish-washer" />
-                <label htmlFor="dish-washer">Dish Washer</label>
-              </div>
-              <div>
-                <input type="checkbox" name="issue" value="garbage-disposal" />
-                <label htmlFor="garbage-disposal">Garbage Disposal</label>
-              </div>
-            </div>
-            <div className="right-section">
-              <div>
-                <input type="checkbox" name="issue" value="range-hood" />
-                <label htmlFor="range-hood">Range Hood</label>
-              </div>
-              <div>
-                <input type="checkbox" name="issue" value="washer" />
-                <label htmlFor="washer">Washer</label>
-              </div>
-              <div>
-                <input type="checkbox" name="issue" value="dryer" />
-                <label htmlFor="dryer">Dryer</label>
-              </div>
-              <div>
-                <input type="checkbox" name="issue" value="other" />
-                <label htmlFor="other">Other: </label>
-                <input
-                  type="text"
-                  id="otherIssues"
-                  name="otherIssues"
-                  maxLength="50"
-                  value={formState.otherIssues}
-                  onChange={handleInputChange}
-                ></input>
+              <div className="issues__container--right">
+                <div>
+                  <input type="checkbox" name="issue" value="range-hood" />
+                  <label htmlFor="range-hood">Range Hood</label>
+                </div>
+                <div>
+                  <input type="checkbox" name="issue" value="washer" />
+                  <label htmlFor="washer">Washer</label>
+                </div>
+                <div>
+                  <input type="checkbox" name="issue" value="dryer" />
+                  <label htmlFor="dryer">Dryer</label>
+                </div>
+                <div>
+                  <input type="checkbox" name="issue" value="other" />
+                  <label htmlFor="other">Other: </label>
+                  <input
+                    type="text"
+                    className="other__input"
+                    name="otherIssues"
+                    maxLength="50"
+                    value={formState.otherIssues}
+                    onChange={handleInputChange}
+                  ></input>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
-        {/* model and serial # */}
-        <section className="model-and-serial">
-          <h3>Appliance Details</h3>
-          <div className="form-row">
-            <label htmlFor="model">Model: </label>
-            <input
+          </section>
+          {/* model and serial # */}
+          <section className="maintenance__section">
+            <h3 className="title">Appliance Details</h3>
+            <div>
+              <label htmlFor="model">Model: </label>
+              <input
+                type="text"
+                className="appliance__input"
+                style={{marginBottom: "5px"}}
+                name="model"
+                maxLength="50"
+                value={formState.model}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div>
+              <label htmlFor="serial">Serial Number: </label>
+              <input
+                type="text"
+                className="appliance__input"
+                name="serial"
+                maxLength="50"
+                value={formState.serial}
+                onChange={handleInputChange}
+              />
+            </div>
+          </section>
+          {/* message */}
+          <section>
+            <h3 className="title">Message</h3>
+            <textarea
               type="text"
-              id="model"
-              name="model"
-              maxLength="50"
-              value={formState.model}
+              name="message"
+              className="maintenanceForm__message"
+              maxLength="700"
+              placeholder="Please describe the issue in as much detail as possible*"
+              value={formState.message}
               onChange={handleInputChange}
-            />
-          </div>
-          <div className="form-row">
-            <label htmlFor="serial">Serial Number: </label>
-            <input
-              type="text"
-              id="serial"
-              name="serial"
-              maxLength="50"
-              value={formState.serial}
-              onChange={handleInputChange}
-            />
-          </div>
-        </section>
-        {/* message */}
-        <section className="message">
-          <h3>Message</h3>
-          <textarea
-            type="text"
-            id="message"
-            name="message"
-            maxLength="600"
-            placeholder="Please describe the issue in as much detail as possible*"
-            value={formState.message}
-            onChange={handleInputChange}
-            required
-          ></textarea>
-        </section>
-        {/* submit button */}
-        <div className="form-row">
-          <button type="submit">Submit</button>
-        </div>
-      </form>
+              required
+            ></textarea>
+          </section>
+          {/* submit button */}
+          <button type="submit" className="maintenanceForm__button">Submit</button>
+        </form>
     </Modal>
   );
 };
