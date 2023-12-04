@@ -64,7 +64,7 @@ const ShowingModal = ({ onSubmit, isOpen, onClose }) => {
     <Modal hasCloseBtn={true} isOpen={isOpen} onClose={onClose}>
       <h1 className="title" style={{ textAlign: "center" }}>
         {" "}
-        Request a Showing{" "}
+        Request Showing{" "}
       </h1>
       <form ref={form} onSubmit={sendEmail} className="showingForm_container">
         <section className="showing__section">
