@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef} from "react";
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import Modal from "../modal/modal";
 import emailjs from "emailjs-com";
 import "./ShowingModal.scss";
@@ -62,49 +62,54 @@ const ShowingModal = ({ onSubmit, isOpen, onClose }) => {
 
   return (
     <Modal hasCloseBtn={true} isOpen={isOpen} onClose={onClose}>
-      <h3 className="title"> Request a Showing </h3>
+      <h1 className="title" style={{ textAlign: "center" }}>
+        {" "}
+        Request a Showing{" "}
+      </h1>
       <form ref={form} onSubmit={sendEmail} className="showingForm_container">
-        <input
-          placeholder="Name*"
-          ref={focusInputRef}
-          type="text"
-          className="showingForm__input"
-          name="name"
-          maxLength="50"
-          value={formState.name}
-          onChange={handleInputChange}
-          required
-        ></input>
-        <input
-          placeholder="Phone Number*"
-          type="tel"
-          className="showingForm__input"
-          name="phone"
-          pattern="\(?\d{3}\)?-? *\d{3}-? *-?\d{4}"
-          value={formState.phone}
-          onChange={handleInputChange}
-          required
-        ></input>
-        <input
-          placeholder="Email*"
-          type="email"
-          className="showingForm__input"
-          name="email"
-          maxLength="50"
-          value={formState.email}
-          onChange={handleInputChange}
-          required
-        ></input>
-        <textarea
-          placeholder="Please list convenient times to view the property*"
-          type="text"
-          className="showingForm__message"
-          name="message"
-          maxLength="500"
-          value={formState.message}
-          onChange={handleInputChange}
-          required
-        ></textarea>
+        <section className="showing__section">
+          <input
+            placeholder="Name*"
+            ref={focusInputRef}
+            type="text"
+            className="showingForm__input"
+            name="name"
+            maxLength="50"
+            value={formState.name}
+            onChange={handleInputChange}
+            required
+          ></input>
+          <input
+            placeholder="Phone Number*"
+            type="tel"
+            className="showingForm__input"
+            name="phone"
+            pattern="\(?\d{3}\)?-? *\d{3}-? *-?\d{4}"
+            value={formState.phone}
+            onChange={handleInputChange}
+            required
+          ></input>
+          <input
+            placeholder="Email*"
+            type="email"
+            className="showingForm__input"
+            name="email"
+            maxLength="50"
+            value={formState.email}
+            onChange={handleInputChange}
+            required
+          ></input>
+          <textarea
+            placeholder="Please list convenient times to view the property*"
+            type="text"
+            className="showingForm__message"
+            name="message"
+            maxLength="500"
+            value={formState.message}
+            onChange={handleInputChange}
+            required
+          ></textarea>
+        </section>
         <button type="submit" className="showingForm__button">
           Submit
         </button>
