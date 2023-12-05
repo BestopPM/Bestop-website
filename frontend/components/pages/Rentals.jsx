@@ -1,7 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, lazy, Suspense } from "react";
 import ShowingModal from "../ShowingModal/ShowingModal";
-import propertyPhoto from "../assets/property-photo.jpeg";
 import "./Rentals.scss";
+
+const LazyRental = lazy(() => import(
+  '../lazyComponents/lazyRental'
+));
 
 const Rentals = () => {
   const [isShowingModalOpen, setShowingModalOpen] = useState(false);
@@ -28,11 +31,10 @@ const Rentals = () => {
             <h4 style={{ fontWeight: "500"}}>
               123 Happy Lane, Happyville, CA 80085
             </h4>
-            <img
-              src={propertyPhoto}
-              alt="propertyImage"
-              className="property__img"
-            ></img>
+             <Suspense fallback = 
+              {<div>Rental photo loading please wait...</div>}>
+              <LazyRental />
+              </Suspense>
           </div>
 
           <div className="rentalContent__container--right">
