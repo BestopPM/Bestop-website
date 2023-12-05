@@ -19,7 +19,13 @@ body {
 
 main {
   padding: 0.625rem;
-  margin-top: 0.625rem;
+  margin-top: 0.8rem;
+}
+
+footer {
+  font-size: 0.8rem;
+  color: #999999;
+  text-align: center;
 }
 
 #root {
@@ -44,3 +50,13 @@ main {
   margin: 0px;
 }
 
+// make footer stick to bottom
+.site {
+  display: flex;
+  min-height: 80vh;
+  flex-direction: column;
+}
+
+.site__content {
+  flex: 1;
+}
