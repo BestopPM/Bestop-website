@@ -1,7 +1,6 @@
 import React, {lazy, Suspense} from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.scss";
-import logo from "./assets/logo.webp";
 
 const LazyLogo = lazy(() => import(
   './lazyComponents/lazyLogo'
@@ -13,7 +12,6 @@ const Navbar = () => {
       <div className="pageHeader__container">
         <div className="pageHeader__container--left">
           <Link to="/about">
-            {/* <img src={logo} alt="BesTop Logo" className="logo__img"/> */}
             <Suspense fallback = 
               {<div>Logo loading please wait...</div>}>
               <LazyLogo />

@@ -1,10 +1,9 @@
 import React, {lazy, Suspense} from 'react'
-import aboutPhoto from "../assets/aboutPhoto.webp";
 import "./About.scss"
 
 const LazyAbout = lazy(() => import(
   '../lazyComponents/lazyAbout'
-))
+));
 
 const About = () => {
   return(
@@ -19,7 +18,6 @@ const About = () => {
           </p>
         </section>
         <section className="aboutContent__container--bottom">
-          {/* <img src={aboutPhoto} alt="housesPhoto" className="about__img"/> */}
           <Suspense fallback = 
           {<div>About Photo loading please wait...</div>}>
             <LazyAbout />
