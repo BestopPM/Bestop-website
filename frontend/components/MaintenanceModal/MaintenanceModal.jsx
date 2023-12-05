@@ -229,7 +229,7 @@ const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
               <input
                 type="text"
                 className="appliance__input"
-                style={{marginBottom: "5px"}}
+                style={{marginTop: "0.375rem", marginBottom: "0.65rem"}}
                 name="model"
                 maxLength="50"
                 value={formState.model}
@@ -242,6 +242,7 @@ const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
                 type="text"
                 className="appliance__input"
                 name="serial"
+                style={{marginBottom: "0"}}
                 maxLength="50"
                 value={formState.serial}
                 onChange={handleInputChange}

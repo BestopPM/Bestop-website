@@ -62,11 +62,12 @@
 .appliance__input {
   width: 65%;
   padding: 0.25rem 0.625rem;
+  margin-left: 0.5rem;
 }
 
 .maintenanceForm__message {
   overflow: auto;
-  min-height: 15vh;
+  min-height: 12vh;
   margin-bottom: 1rem;
 }
 
