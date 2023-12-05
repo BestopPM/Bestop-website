@@ -38,7 +38,7 @@ const Rentals = () => {
               className="property__img"
             ></img> */}
              <Suspense fallback = 
-              {<div>Photo loading please wait...</div>}>
+              {<div>Rental photo loading please wait...</div>}>
               <LazyRental />
               </Suspense>
           </div>
