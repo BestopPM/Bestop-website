@@ -5,7 +5,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
-  row-gap: 20px;
+  row-gap: 1.25rem;
 }
 
 .tenantResources {
@@ -14,19 +14,19 @@
 
 .tenantResources__item {
   list-style: none;
-  padding-bottom: 10px;
+  padding-bottom: 0.625rem;
 }
 
 .maintenanceRequest__button {
-  font-size: 1em;
+  font-size: 1rem;
   min-height: 3vh;
   min-width: 11vw;
-  margin: 0px 0px 16px 0px;
-  padding: 10px;
+  margin: 0px 0px 1rem 0px;
+  padding: 0.75rem;
   color: $text-color;
   background-color: $button-color;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.375rem;
   transition: all 0.3s ease;
   transition-property: filter, transform;
   font-weight: map-get($font-weights, medium);
