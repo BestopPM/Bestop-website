@@ -75,7 +75,7 @@
   font-size: 1rem;
   min-width: 30vw;
   min-height: 4vh;
-  padding: 0.625rem;
+  padding: 0.75rem;
   color: $text-color;
   background-color: $button-color;
   border: none;
@@ -87,7 +87,7 @@
 
   &:hover {
     cursor: pointer;
-    filter: brightness(87%);
+    filter: brightness(80%);
   }
 
   &:active {
