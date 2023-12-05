@@ -3,7 +3,7 @@ import aboutPhoto from "../assets/aboutPhoto.webp";
 import "./About.scss"
 
 const Component1 = lazy(() => import(
-  '../pages/lazyAbout'
+  '../lazyComponents/lazyAbout'
 ))
 
 const About = () => {
