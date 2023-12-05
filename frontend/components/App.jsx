@@ -16,7 +16,7 @@ import RentalsNone from "./Pages/RentalsNone";
 const App = () => {
   return (
     <>
-      <div class="site">
+      <div className="site">
         <div className="site__content">
           <Navbar />
           <Routes>
