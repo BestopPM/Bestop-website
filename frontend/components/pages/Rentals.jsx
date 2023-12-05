@@ -55,7 +55,7 @@ const Rentals = () => {
                   className="showingRequest__button"
                   onClick={handleOpenShowingModal}
                 >
-                  Request a Showing
+                  Request Showing
                 </button>
                 <ShowingModal
                   isOpen={isShowingModalOpen}
