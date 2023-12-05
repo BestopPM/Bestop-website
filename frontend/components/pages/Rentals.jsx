@@ -44,9 +44,9 @@ const Rentals = () => {
                 per month
               </p>
               <p>
-                2 BR &nbsp;&nbsp; <span style={{ color: "#a9a9a9" }}>|</span>
+                2 BR &nbsp;&nbsp; <span style={{ color: "#999999" }}>|</span>
                 &nbsp;&nbsp; 2 BA &nbsp;&nbsp;{" "}
-                <span style={{ color: "#a9a9a9" }}>|</span>&nbsp;&nbsp; 341 SF
+                <span style={{ color: "#999999" }}>|</span>&nbsp;&nbsp; 341 SF
               </p>
             </div>
 

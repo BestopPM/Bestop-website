@@ -22,6 +22,14 @@ main {
   margin-top: 0.625rem;
 }
 
+footer {
+  font-size: 0.8rem;
+  color: #999999;
+  position: absolute;
+  left: 27.6rem;
+  bottom: 2rem;
+}
+
 #root {
   background-color: #ffffff;
   width: 70vw;
@@ -29,6 +37,7 @@ main {
   margin: 4.1rem auto;
   padding: 1.5rem 2.25rem;
   border-radius: 0.5rem;
+  position: relative;
 }
 
 .header {

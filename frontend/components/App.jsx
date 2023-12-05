@@ -26,6 +26,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/submitted" element={<Submit />} />
       </Routes>
+      <footer>DRE License #01238854&nbsp;&nbsp;|&nbsp;&nbsp;ellencanhelp@gmail.com&nbsp;&nbsp;|&nbsp;&nbsp;(510) 936-8686</footer>
     </>
   );
 };
