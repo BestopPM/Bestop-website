@@ -3,7 +3,7 @@ import logo from "../assets/logo.webp";
 
 const LazyLogo = () => {
     return (
-        <img src={logo} alt="BesTop Logo" className="logo__img"/>
+        <img src={logo} width="180" height="82" alt="BesTop Logo" className="logo__img" decoding="async"/>
     )
 }
 
