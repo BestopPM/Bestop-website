@@ -30,7 +30,7 @@ const App = () => {
           </Routes>
         </div>
         <footer>
-          <p>DRE License #01238854&nbsp;&nbsp;|&nbsp;&nbsp;ellencanhelp@gmail.com&nbsp;&nbsp;|&nbsp;&nbsp;(510) 936-8686
+          <p>BRE License #01238854&nbsp;&nbsp;|&nbsp;&nbsp;NMLS License #208625
           </p>
         </footer>
       </div>
