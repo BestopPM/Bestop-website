@@ -14,6 +14,7 @@ const initialMaintenanceModalData = {
   issue: [],
   otherIssues: "",
   model: "",
+  brand: "",
   serial: "",
   message: "",
 };
@@ -225,11 +226,23 @@ const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
           <section className="maintenance__section">
             <h3 className="title">Appliance Details</h3>
             <div>
-              <label htmlFor="model">Model: </label>
+              <label htmlFor="brand">Brand: </label>
               <input
                 type="text"
                 className="appliance__input"
                 style={{marginTop: "0.375rem", marginBottom: "0.65rem"}}
+                name="brand"
+                maxLength="50"
+                value={formState.brand}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div>
+              <label htmlFor="model">Model: </label>
+              <input
+                type="text"
+                className="appliance__input"
+                style={{marginBottom: "0.65rem"}}
                 name="model"
                 maxLength="50"
                 value={formState.model}
