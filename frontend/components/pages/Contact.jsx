@@ -43,7 +43,7 @@ const Contact = () => {
           </p>
           <p>
             <strong>Email: </strong>
-            ellencanhelp@gmail.com
+            bestopllc@gmail.com
           </p>
           <p>
             <strong>Phone: </strong>
