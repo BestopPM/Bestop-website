@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import MaintenanceModal from "../MaintenanceModal/MaintenanceModal";
-import "./Tenant.scss"
+import "./Tenant.scss";
+import TermNotice from "../assets/termination-notice.pdf";
+import MoveOutChecklist from "../assets/move-out-checklist.pdf";
 
 const Tenant = () => {
   const [isMaintenanceModalOpen, setMaintenanceModalOpen] = useState(false);
@@ -26,14 +28,21 @@ const Tenant = () => {
           <h3 className="title">Tenant Resources</h3>
           <ul className="tenantResources">
             <li className="tenantResources__item">
-              <a className="tenantResources__link" href="/moveOutNotice">Move Out Notice</a>
-            </li>
-            <li className="tenantResources__item">
-              <a className="tenantResources__link" href="/cleaningInstructions">Move Out Cleaning Instructions 
+              <a
+                className="tenantResources__link"
+                href={TermNotice}
+                target="_blank"
+              >
+                Notice of Termination
               </a>
             </li>
             <li className="tenantResources__item">
-              <a className="tenantResources__link" href="/forwardingAddress">Move Out Forwarding Address
+              <a
+                className="tenantResources__link"
+                href={MoveOutChecklist}
+                target="_blank"
+              >
+                Move Out Checklist
               </a>
             </li>
           </ul>
@@ -43,11 +52,14 @@ const Tenant = () => {
           <p>
             Please describe the problem in as much detail as possible.
             <br />
-            Once submitted, a property manager should contact you
-            within 24 hours.
+            Once submitted, a property manager should contact you within 24
+            hours.
           </p>
 
-          <button onClick={handleOpenMaintenanceModal} className="maintenanceRequest__button">
+          <button
+            onClick={handleOpenMaintenanceModal}
+            className="maintenanceRequest__button"
+          >
             Maintenance Request
           </button>
 
