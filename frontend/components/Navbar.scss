@@ -57,3 +57,12 @@
   }
 }
 
+@media (max-width: 1280px) {
+  .pageHeader__container {
+    flex-direction: column;
+  }
+  .logo__img {
+    margin-left: 0.75rem;
+  }
+}
+
