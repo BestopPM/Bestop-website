@@ -38,12 +38,12 @@ const Contact = () => {
           <h3 className="title">Contact Information</h3>
           <p>
             <strong>Mailing Address:</strong>
-            <br /> 47000 Warm Springs Blvd Ste 274
+            <br /> 47000 Warm Springs Blvd #274
             <br /> Fremont, CA 94539
           </p>
           <p>
             <strong>Email: </strong>
-            ellencanhelp@gmail.com
+            bestopllc@gmail.com
           </p>
           <p>
             <strong>Phone: </strong>
@@ -51,7 +51,7 @@ const Contact = () => {
           </p>
           <p>
             <strong> Business Hours: </strong>
-            <br /> Mon-Fri: 9:00am - 6:00pm
+            <br /> Mon-Fri: 9:00am - 5:00pm
             <br />
             Sat-Sun: Closed
           </p>
