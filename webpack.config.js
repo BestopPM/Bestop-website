@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: "./index.js",
   output: {
-    path: path.join(__dirname, "build"),
+    path: path.resolve(__dirname, "build"),
     publicPath: "/",
     filename: "bundle.js",
   },
@@ -49,9 +49,10 @@ module.exports = {
     hot: true,
     historyApiFallback: true,
     static: {
-      directory: path.resolve(__dirname, "client/components/public"),
-      publicPath: "bundle.js",
+      directory: path.resolve(__dirname, "build"),
+      publicPath: "/",
     },
+    headers: { 'Access-Control-Allow-Origin': '*' },
     proxy: {
       "/api/**": "http://localhost:3000",
     },
