@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useRef, lazy, Suspense } from "react";
 import ShowingModal from "../ShowingModal/ShowingModal";
 import "./Rentals.scss";
+import RentalApp from "../assets/rental-app.pdf";
 
-const LazyRental = lazy(() => import(
-  '../lazyComponents/lazyRental'
-));
+const LazyRental = lazy(() => import("../lazyComponents/lazyRental"));
 
 const Rentals = () => {
   const [isShowingModalOpen, setShowingModalOpen] = useState(false);
@@ -28,13 +27,12 @@ const Rentals = () => {
         <h3 className="title">Property Information</h3>
         <section className="rentalContent__container">
           <div className="rentalContent__container--left">
-            <h4 style={{ fontWeight: "500"}}>
+            <h4 style={{ fontWeight: "500" }}>
               123 Happy Lane, Happyville, CA 80085
             </h4>
-             <Suspense fallback = 
-              {<div>Rental photo loading please wait...</div>}>
+            <Suspense fallback={<div>Rental photo loading please wait...</div>}>
               <LazyRental />
-              </Suspense>
+            </Suspense>
           </div>
 
           <div className="rentalContent__container--right">
@@ -53,21 +51,21 @@ const Rentals = () => {
             </div>
 
             <div>
-                <button
-                  className="showingRequest__button"
-                  onClick={handleOpenShowingModal}
-                >
-                  Request Showing
-                </button>
-                <ShowingModal
-                  isOpen={isShowingModalOpen}
-                  onSubmit={handleFormSubmit}
-                  onClose={handleCloseShowingModal}
-                />
+              <button
+                className="showingRequest__button"
+                onClick={handleOpenShowingModal}
+              >
+                Request Showing
+              </button>
+              <ShowingModal
+                isOpen={isShowingModalOpen}
+                onSubmit={handleFormSubmit}
+                onClose={handleCloseShowingModal}
+              />
             </div>
 
             <div>
-              <a id="rentalApp" href="/rentalApp">
+              <a href={RentalApp} target="_blank" filename="rental-application">
                 Rental Application
               </a>
             </div>
@@ -83,7 +81,6 @@ const Rentals = () => {
             <div>
               <a href="https://www.zillow.com/">Full Details on Zillow</a>
             </div>
-
           </div>
         </section>
       </main>
