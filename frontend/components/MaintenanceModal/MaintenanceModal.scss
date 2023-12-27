@@ -11,7 +11,6 @@
 .maintenanceForm__container {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
 }
 
 .contact__input,
@@ -67,7 +66,8 @@
 
 .maintenanceForm__message {
   overflow: auto;
-  min-height: 12vh;
+  min-height: 14vh;
+  margin-top: 0.375rem;
   margin-bottom: 1rem;
 }
 

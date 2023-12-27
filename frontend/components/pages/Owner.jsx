@@ -1,4 +1,5 @@
 import React from "react";
+import "./Owner.scss"
 
 const Owner = () => {
   return (
@@ -14,7 +15,7 @@ const Owner = () => {
           quality vendors to preserve and protect owner’s investments.
         </p>
 
-        <section>
+        <section className="ownerContent">
           <p>PROPERTY MANAGEMENT includes:</p>
           <ul>
             <li>

@@ -250,12 +250,12 @@ const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
               />
             </div>
             <div>
-              <label htmlFor="serial">Serial Number: </label>
+              <label htmlFor="serial">Serial #: </label>
               <input
                 type="text"
                 className="appliance__input"
+                style={{marginBottom: "1rem"}}
                 name="serial"
-                style={{marginBottom: "0"}}
                 maxLength="50"
                 value={formState.serial}
                 onChange={handleInputChange}

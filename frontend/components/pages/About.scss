@@ -15,3 +15,9 @@
   margin-top: 3.5rem;
   border-radius: 0.375rem;
 }
+
+@media (max-width: 1440px) {
+  .aboutContent__container p {
+    font-size: 0.875rem;
+  }
+}
