@@ -22,13 +22,13 @@ const Owner = () => {
               Initial inspection & coordination of work required to get property
               “Rent Ready”
             </li>
-            <li>Determining ental price based on market analysis</li>
+            <li>Determining rental price based on market analysis</li>
             <li>Advertising, Showing, and Tenant Screening and Selection </li>
             <li>Move-in Inspection of the Property</li>
             <li>Executing Rental/Lease Agreement and Rent Collection</li>
             <li>Property Repair and Maintenance</li>
             <li>
-              Service Legal Notices, Process Evictions and Collections as
+              Service Legal Notices and Process Evictions and Collections as
               Required
             </li>
             <li>Providing Monthly and Yearly Financial Statement</li>
