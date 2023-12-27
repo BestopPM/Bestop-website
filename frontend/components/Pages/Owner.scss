@@ -1,7 +1,15 @@
 
 @media (max-width: 1440px) {
-  p,
-  li {
+  .ownerContent > p,
+  .ownerContent > section {
     font-size: 0.875rem;
+  }
+  
+  .ownerList > ul {
+    margin: 0px;
+  }
+
+  .listHeader {
+    margin: 5px 0px;
   }
 }

@@ -6,7 +6,7 @@ const Owner = () => {
     <>
       <header className="header">Owner Services</header>
 
-      <main>
+      <main className="ownerContent">
         <h3 className="title">Overview</h3>
         <p>
           BESTOP PROPERTY MANAGEMENT takes a customized, individual approach to
@@ -15,8 +15,8 @@ const Owner = () => {
           quality vendors to preserve and protect owner’s investments.
         </p>
 
-        <section className="ownerContent">
-          <p>PROPERTY MANAGEMENT includes:</p>
+        <section className="ownerList">
+          <p className="ownerList__header">PROPERTY MANAGEMENT includes:</p>
           <ul>
             <li>
               Initial inspection & coordination of work required to get property
