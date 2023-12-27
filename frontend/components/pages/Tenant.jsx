@@ -4,6 +4,7 @@ import MaintenanceModal from "../MaintenanceModal/MaintenanceModal";
 import "./Tenant.scss";
 import TermNotice from "../assets/termination-notice.pdf";
 import MoveOutChecklist from "../assets/move-out-checklist.pdf";
+import RentalApp from "../assets/rental-app.pdf";
 
 const Tenant = () => {
   const [isMaintenanceModalOpen, setMaintenanceModalOpen] = useState(false);
@@ -43,6 +44,15 @@ const Tenant = () => {
                 target="_blank"
               >
                 Move Out Checklist
+              </a>
+            </li>
+            <li className="tenantResources__item">
+              <a
+                className="tenantResources__link"
+                href={RentalApp}
+                target="_blank"
+              >
+                Rental Application
               </a>
             </li>
           </ul>
