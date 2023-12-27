@@ -31,6 +31,15 @@ const Tenant = () => {
             <li className="tenantResources__item">
               <a
                 className="tenantResources__link"
+                href={RentalApp}
+                target="_blank"
+              >
+                Rental Application
+              </a>
+            </li>
+            <li className="tenantResources__item">
+              <a
+                className="tenantResources__link"
                 href={TermNotice}
                 target="_blank"
               >
@@ -44,15 +53,6 @@ const Tenant = () => {
                 target="_blank"
               >
                 Move Out Checklist
-              </a>
-            </li>
-            <li className="tenantResources__item">
-              <a
-                className="tenantResources__link"
-                href={RentalApp}
-                target="_blank"
-              >
-                Rental Application
               </a>
             </li>
           </ul>
