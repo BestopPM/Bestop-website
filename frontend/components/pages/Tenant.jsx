@@ -31,6 +31,15 @@ const Tenant = () => {
             <li className="tenantResources__item">
               <a
                 className="tenantResources__link"
+                href={RentalApp}
+                target="_blank"
+              >
+                Rental Application
+              </a>
+            </li>
+            <li className="tenantResources__item">
+              <a
+                className="tenantResources__link"
                 href={TermNotice}
                 target="_blank"
               >
@@ -46,25 +55,22 @@ const Tenant = () => {
                 Move Out Checklist
               </a>
             </li>
-            <li className="tenantResources__item">
-              <a
-                className="tenantResources__link"
-                href={RentalApp}
-                target="_blank"
-              >
-                Rental Application
-              </a>
-            </li>
           </ul>
         </section>
         <section className="tenantContent__container--bottom">
-          <h3 className="title">Maintenance Request</h3>
-          <p>
-            Please describe the problem in as much detail as possible.
-            <br />
-            Once submitted, a property manager should contact you within 24
-            hours.
-          </p>
+          <h3 className="title">
+            Maintenance Request{" "}
+            <span style={{fontSize: "1rem"}}>
+              {" "}
+              - Once submitted, a property manager <br></br> should contact you within 24
+              hours{" "}
+            </span>
+          </h3>
+          <ol className="maintenanceRequest__instruction">
+            <li>Please describe the problem in as much detail as possible.</li>
+            <li>Send photos/videos to (510) 936-8686 for prompt service. </li>
+            <li>Refer to page 5 of your lease under <strong>Maintenance</strong> for details. </li>
+          </ol>
 
           <button
             onClick={handleOpenMaintenanceModal}

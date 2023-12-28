@@ -61,8 +61,15 @@
   .pageHeader__container {
     flex-direction: column;
   }
+
+  .pageHeader__container--right {
+    flex-grow: 2;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1279px) {
   .logo__img {
     margin-left: 0.75rem;
   }
 }
-
