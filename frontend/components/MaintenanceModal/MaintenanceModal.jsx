@@ -94,17 +94,7 @@ const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
             required
           />
           {/* phone */}
-          {/* <input
-            type="tel"
-            className="contact__input"
-            name="phone"
-            pattern="\(?\d{3}\)?-? *\d{3}-? *-?\d{4}"
-            placeholder="Phone Number*"
-            value={formState.phone}
-            onChange={handleInputChange}
-            required
-          /> */}
-          <PhoneNumberInput value={formState.phone} onChange={handleInputChange}/>
+          <PhoneNumberInput className="contact__input" value={formState.phone} onChange={handleInputChange}/>
           {/* email */}
           <input
             type="email"
