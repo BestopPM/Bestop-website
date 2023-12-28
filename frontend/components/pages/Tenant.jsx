@@ -62,7 +62,7 @@ const Tenant = () => {
             Maintenance Request{" "}
             <span style={{fontSize: "1rem"}}>
               {" "}
-              - Once submitted, a property manager should contact you within 24
+              - Once submitted, a property manager <br></br> should contact you within 24
               hours{" "}
             </span>
           </h3>
@@ -76,7 +76,7 @@ const Tenant = () => {
             onClick={handleOpenMaintenanceModal}
             className="maintenanceRequest__button"
           >
-            Submit Maintenance Request
+            Maintenance Request
           </button>
 
           <MaintenanceModal
