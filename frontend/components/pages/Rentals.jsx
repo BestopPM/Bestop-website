@@ -23,8 +23,7 @@ const Rentals = () => {
   return (
     <>
       <header className="header">Available Rentals</header>
-      <main>
-        <h3 className="title">Property Information</h3>
+      <main style={{marginTop: "0px"}}>
         <section className="rentalContent__container">
           <div className="rentalContent__container--left">
             <h4 style={{ fontWeight: "500" }}>

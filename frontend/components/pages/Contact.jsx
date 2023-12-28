@@ -11,10 +11,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_ybsczy9",
-        "template_o0qg5a4",
+        "service_hxuywdr",
+        "template_vl9raxz",
         form.current,
-        "aKD-Us6N3g93XuFJ8"
+        "SGU4cgWPtbLorM_Sa"
       )
       .then(
         (result) => {
@@ -51,9 +51,9 @@ const Contact = () => {
           </p>
           <p>
             <strong> Business Hours: </strong>
-            <br /> Mon-Fri: 9:00am - 5:00pm
+            <br /> Mon - Fri: 9:00am - 5:00pm
             <br />
-            Sat-Sun: Closed
+            Sat - Sun: Closed
           </p>
           <Link to="/tenant"> Maintenance Request </Link>
         </section>
