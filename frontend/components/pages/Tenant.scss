@@ -16,11 +16,15 @@
   padding-bottom: 0.625rem;
 }
 
+.maintenanceRequest__instruction {
+  padding-left: 1.25rem;
+}
+
 .maintenanceRequest__button {
   font-size: 1.05rem;
   min-height: 3vh;
   min-width: 11vw;
-  margin: 0px 0px 1rem 0px;
+  margin: 0px 0px 1.25rem 0px;
   padding: 0.75rem;
   color: $text-color;
   background-color: #E86826;
