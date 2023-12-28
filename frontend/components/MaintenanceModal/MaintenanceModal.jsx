@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import PhoneNumberInput from "../../InputMasks/PhoneNumberInput";
 import Modal from "../modal/modal";
 import emailjs from "emailjs-com";
 import { useNavigate } from "react-router-dom";
@@ -93,7 +94,7 @@ const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
             required
           />
           {/* phone */}
-          <input
+          {/* <input
             type="tel"
             className="contact__input"
             name="phone"
@@ -102,7 +103,8 @@ const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
             value={formState.phone}
             onChange={handleInputChange}
             required
-          />
+          /> */}
+          <PhoneNumberInput value={formState.phone} onChange={handleInputChange}/>
           {/* email */}
           <input
             type="email"
