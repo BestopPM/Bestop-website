@@ -51,7 +51,7 @@ const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
 
     emailjs
       .sendForm(
-        "service_ybsczy9",
+        "service_99exsfl",
         "template_e1xmhdf",
         form.current,
         "aKD-Us6N3g93XuFJ8"
