@@ -51,9 +51,9 @@ const Contact = () => {
           </p>
           <p>
             <strong> Business Hours: </strong>
-            <br /> Mon-Fri: 9:00am - 5:00pm
+            <br /> Mon - Fri: 9:00am - 5:00pm
             <br />
-            Sat-Sun: Closed
+            Sat - Sun: Closed
           </p>
           <Link to="/tenant"> Maintenance Request </Link>
         </section>
