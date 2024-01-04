@@ -1,11 +1,18 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
+import PhoneNumberInput from "../../InputMasks/PhoneNumberInput";
 import "./Contact.scss";
 import emailjs from "emailjs-com";
 import { Link, useNavigate } from "react-router-dom";
 
 const Contact = () => {
+  const [phone, setPhone] = useState('');
   const form = useRef();
   const navigate = useNavigate();
+
+  const handleInputChange = (e) => {
+    setPhone(e.target.value);
+  }
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -76,14 +83,7 @@ const Contact = () => {
               required
             />
             {/* phone */}
-            <input
-              type="tel"
-              name="phone"
-              className="contactForm__input"
-              pattern="\(?\d{3}\)?-? *\d{3}-? *-?\d{4}"
-              placeholder="Phone Number*"
-              required
-            />
+            <PhoneNumberInput className="contactForm__input" value={phone} onChange={handleInputChange}/>
             {/* email */}
             <input
               type="email"

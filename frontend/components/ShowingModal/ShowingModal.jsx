@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import Modal from "../modal/modal";
+import PhoneNumberInput from "../../InputMasks/PhoneNumberInput";
 import emailjs from "emailjs-com";
 import "./ShowingModal.scss";
 
@@ -79,16 +80,7 @@ const ShowingModal = ({ onSubmit, isOpen, onClose }) => {
             onChange={handleInputChange}
             required
           ></input>
-          <input
-            placeholder="Phone Number*"
-            type="tel"
-            className="showingForm__input"
-            name="phone"
-            pattern="\(?\d{3}\)?-? *\d{3}-? *-?\d{4}"
-            value={formState.phone}
-            onChange={handleInputChange}
-            required
-          ></input>
+          <PhoneNumberInput className="contact__input" value={formState.phone} onChange={handleInputChange}/>
           <input
             placeholder="Email*"
             type="email"
