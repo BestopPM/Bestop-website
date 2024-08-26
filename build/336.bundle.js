@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbestop_landing=self.webpackChunkbestop_landing||[]).push([[336],{336:(e,t,a)=>{a.r(t),a.d(t,{default:()=>s});var c=a(294);const n=a.p+"5f36cbb3c8bca361872427fa7e77f28c.webp",s=function(){return c.createElement("img",{src:n,width:"450",height:"300",alt:"propertyImage",className:"property__img",decoding:"async"})}}}]);

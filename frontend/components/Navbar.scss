@@ -1,0 +1,75 @@
+@import "App";
+
+.pageHeader__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.pageHeader__container--left {
+  width: 180px;
+  margin-right: 1.25rem;
+}
+
+// Make sure navbar fill white space in flex-box
+.pageHeader__container--right {
+  flex-grow: 2;
+}
+
+// Make sure the logo image doesn't exceed its container
+.logo__img {
+  max-width: 100%;
+  height: auto;
+}
+
+// control height and width of nav bar
+.navbar__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: $primary-color;
+  padding: 0.65rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: map-get($font-weights, medium);
+}
+
+.navbar__item {
+  display: inline-block;
+}
+
+// control height and width of hover effect
+.navbar__link {
+  text-decoration: none;
+  color: $text-color;
+  padding: 0.3125rem 1rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+  border-radius: 0.3125rem;
+  transition-property: background-color, transform, color;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $text-color;
+    color: $accent-color;
+    transform: scale(1.10); 
+  }
+}
+
+@media (max-width: 1280px) {
+  .pageHeader__container {
+    flex-direction: column;
+  }
+
+  .pageHeader__container--right {
+    flex-grow: 2;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1279px) {
+  .logo__img {
+    margin-left: 0.75rem;
+  }
+}

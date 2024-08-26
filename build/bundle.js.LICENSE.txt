@@ -1,29 +1,32 @@
 /**
- * @license React
- * react-dom.production.min.js
+ * @remix-run/router v1.10.0
  *
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) Remix Software Inc.
  *
  * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
+ * LICENSE.md file in the root directory of this source tree.
+ *
+ * @license MIT
  */
 
 /**
- * @license React
- * react.production.min.js
+ * React Router DOM v6.17.0
  *
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) Remix Software Inc.
  *
  * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
+ * LICENSE.md file in the root directory of this source tree.
+ *
+ * @license MIT
  */
 
 /**
- * @license React
- * scheduler.production.min.js
+ * React Router v6.17.0
  *
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) Remix Software Inc.
  *
  * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
+ * LICENSE.md file in the root directory of this source tree.
+ *
+ * @license MIT
  */

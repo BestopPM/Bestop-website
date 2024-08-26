@@ -1,5 +1,5 @@
-import express from 'express';
-import path from 'path';
+const express = require('express')
+const path = require('path')
 
 const app = express();
 
@@ -15,4 +15,4 @@ app.use((err, req, res, next) => {
 })
 
 //start server on port 3000
-app.listen(3000, () => console.log('Server Listening on Port 3000'))
+app.listen(3000, () => console.log('Server Listening on Port 3000')) 

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbestop_landing=self.webpackChunkbestop_landing||[]).push([[786],{786:(e,a,t)=>{t.r(a),t.d(a,{default:()=>c});var s=t(294);const n=t.p+"7aac6aa68b634324364e8e9db71c5614.webp",c=function(){return s.createElement("img",{src:n,width:"600",height:"317",alt:"housesPhoto",className:"about__img",decoding:"async"})}}}]);

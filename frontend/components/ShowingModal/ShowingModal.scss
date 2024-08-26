@@ -1,0 +1,58 @@
+@import "../App";
+
+.showing__section {
+  margin-top: 1.25rem;
+}
+
+.showingForm__container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.showingForm__input,
+.showingForm__message,
+.showingForm__button {
+  font-family: Roboto, sans-serif;
+  width: 100%;
+  display: block;
+  font-size: 1rem;
+}
+
+// make input and message width the same as submit button
+.showingForm__input,
+.showingForm__message {
+  box-sizing: border-box;
+  padding: 0.375rem 0.625rem;
+  margin-top: 0.5rem;
+}
+
+.showingForm__message {
+  overflow: auto;
+  min-height: 15vh;
+  margin-bottom: 0.75rem;
+}
+
+.showingForm__button {
+  font-size: 1.15rem;
+  min-width: 17vw;
+  min-height: 4vh;
+  padding: 0.625rem;
+  color: $text-color;
+  background-color: $button-color;
+  border: none;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease;
+  transition-property: filter, transform;
+  font-weight: map-get($font-weights, medium);
+  font-family: Roboto, sans-serif;
+
+  &:hover {
+    cursor: pointer;
+    filter: brightness(80%);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
