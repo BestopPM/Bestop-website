@@ -1,12 +1,27 @@
 import React, { useState } from "react";
 import { ArrowBigLeft, ArrowBigRight, Circle, CircleDot } from "lucide-react";
-import img1 from "../assets/prop1.png";
-import img2 from "../assets/prop2.JPEG";
 import "./lazyRental.scss";
 
+import backyard from "../assets/backyard.webp";
+import front from "../assets/front.webp";
+import hallwayBath from "../assets/hallwayBath.webp";
+import kitchen from "../assets/kitchen.webp";
+import livingRoom from "../assets/livingRoom.webp";
+import masterBath from "../assets/masterBath.webp";
+import masterBedroom from "../assets/masterBedroom.webp";
+import patio from "../assets/patio.webp";
+import secondBedroom from "../assets/secondBedroom.webp";
+
 const IMAGES = [
-  { url: img1, alt: "front of house" },
-  { url: img2, alt: "kitchen" },
+  { url: front, alt: "front of house" },
+  { url: livingRoom, alt: "living room" },
+  { url: kitchen, alt: "kitchen" },
+  { url: masterBedroom, alt: "master bedroom" },
+  { url: masterBath, alt: "master bathroom" },
+  { url: secondBedroom, alt: "second bedroom" },
+  { url: hallwayBath, alt: "hallway bathroom" },
+  { url: patio, alt: "patio" },
+  { url: backyard, alt: "backyard" },
 ];
 
 const LazyRental = () => {
