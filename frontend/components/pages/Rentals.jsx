@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, lazy, Suspense } from "react";
+import React, { useState, lazy, Suspense } from "react";
 import ShowingModal from "../ShowingModal/ShowingModal";
 import "./Rentals.scss";
 import RentalApp from "../assets/rental-app.pdf";
@@ -23,11 +23,11 @@ const Rentals = () => {
   return (
     <>
       <header className="header">Available Rentals</header>
-      <main style={{marginTop: "0px"}}>
+      <main style={{ marginTop: "0px" }}>
         <section className="rentalContent__container">
           <div className="rentalContent__container--left">
             <h4 style={{ fontWeight: "500" }}>
-              123 Happy Lane, Happyville, CA 80085
+              3913 Ashgrove Way, Sacramento, CA 95826
             </h4>
             <Suspense fallback={<div>Rental photo loading please wait...</div>}>
               <LazyRental />
@@ -38,14 +38,14 @@ const Rentals = () => {
             <div>
               <p>
                 <span style={{ fontWeight: "700", fontSize: "1.5rem" }}>
-                  $2750
+                  $2,486
                 </span>{" "}
                 per month
               </p>
               <p>
-                2 BR &nbsp;&nbsp; <span style={{ color: "#999999" }}>|</span>
+                3 BR &nbsp;&nbsp; <span style={{ color: "#999999" }}>|</span>
                 &nbsp;&nbsp; 2 BA &nbsp;&nbsp;{" "}
-                <span style={{ color: "#999999" }}>|</span>&nbsp;&nbsp; 341 SF
+                <span style={{ color: "#999999" }}>|</span>&nbsp;&nbsp; 1,096 SF
               </p>
             </div>
 
@@ -70,7 +70,7 @@ const Rentals = () => {
             </div>
 
             <div>
-              <p>Bright home with tons of storage near Woodside Road!</p>
+              <p>Charming 3-Bedroom Home in Prime Location!</p>
               <p style={{ color: "green" }}>
                 <strong>Available now</strong>
               </p>
@@ -78,7 +78,9 @@ const Rentals = () => {
             </div>
 
             <div>
-              <a href="https://www.zillow.com/">Full Details on Zillow</a>
+              <a href="https://www.zillow.com/homedetails/3913-Ashgrove-Way-Sacramento-CA-95826/25888332_zpid/">
+                Full Details on Zillow
+              </a>
             </div>
           </div>
         </section>
