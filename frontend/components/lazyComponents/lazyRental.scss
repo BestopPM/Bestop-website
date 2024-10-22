@@ -5,7 +5,6 @@
   display: block;
   flex-shrink: 0;
   flex-grow: 0;
-  transition: translate 300ms ease-in-out;
 }
 
 .img-slider-btn {
@@ -19,7 +18,8 @@
   transition: transform 100ms ease-in-out;
 }
 
-.img-slider-btn:hover {
+.img-slider-btn:hover,
+.img-slider-btn:focus-visible {
   transform: scale(1.4) perspective(1px);
 }
 
@@ -39,8 +39,9 @@
   transition: scale 100ms ease-in-out;
 }
 
-.img-slider-btn:hover {
-  scale: 1.2;
+.img-slider-dot-btn:hover,
+.img-slider-dot-btn:focus-visible {
+  scale: 1.25;
 }
 
 .img-slider-dot-btn > * {
@@ -48,4 +49,10 @@
   fill: black;
   height: 100%;
   width: 100%;
+}
+
+@media not (prefers-reduced-motion) {
+  .img-slider-img {
+    transition: translate 300ms ease-in-out;
+  }
 }

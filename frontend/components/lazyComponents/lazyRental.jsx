@@ -4,7 +4,10 @@ import img1 from "../assets/prop1.png";
 import img2 from "../assets/prop2.JPEG";
 import "./lazyRental.scss";
 
-const IMAGES = [img1, img2];
+const IMAGES = [
+  { url: img1, alt: "front of house" },
+  { url: img2, alt: "kitchen" },
+];
 
 const LazyRental = () => {
   const [imageIndex, setImageIndex] = useState(0);
@@ -24,7 +27,10 @@ const LazyRental = () => {
   };
 
   return (
-    <div style={{ width: "100%", height: "100%", position: "relative" }}>
+    <section
+      aria-label="Image Slider"
+      style={{ width: "100%", height: "100%", position: "relative" }}
+    >
       <div
         style={{
           width: "100%",
@@ -33,13 +39,14 @@ const LazyRental = () => {
           overflow: "hidden",
         }}
       >
-        {IMAGES.map((url) => (
+        {IMAGES.map(({ url, alt }, index) => (
           <img
             key={url}
             src={url}
             width="450"
             height="300"
-            alt="propertyImage"
+            alt={alt}
+            aria-hidden={imageIndex !== index}
             className="img-slider-img"
             decoding="async"
             style={{ translate: `${-100 * imageIndex}%` }}
@@ -50,15 +57,17 @@ const LazyRental = () => {
         onClick={showPrevImage}
         className="img-slider-btn"
         style={{ left: 0 }}
+        aria-label="View Previous Image"
       >
-        <ArrowBigLeft />
+        <ArrowBigLeft aria-hidden />
       </button>
       <button
         onClick={showNextImage}
         className="img-slider-btn"
         style={{ right: 0 }}
+        aria-label="View Next Image"
       >
-        <ArrowBigRight />
+        <ArrowBigRight aria-hidden />
       </button>
       <div
         style={{
@@ -76,12 +85,13 @@ const LazyRental = () => {
             key={index}
             className="img-slider-dot-btn"
             onClick={() => setImageIndex(index)}
+            aria-label={`View Image ${index + 1}`}
           >
-            {index === imageIndex ? <CircleDot /> : <Circle />}
+            {index === imageIndex ? <CircleDot aria-hidden /> : <Circle />}
           </button>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

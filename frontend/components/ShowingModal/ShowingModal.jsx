@@ -80,7 +80,11 @@ const ShowingModal = ({ onSubmit, isOpen, onClose }) => {
             onChange={handleInputChange}
             required
           ></input>
-          <PhoneNumberInput className="contact__input" value={formState.phone} onChange={handleInputChange}/>
+          <PhoneNumberInput
+            className="showingForm__input"
+            value={formState.phone}
+            onChange={handleInputChange}
+          />
           <input
             placeholder="Email*"
             type="email"
