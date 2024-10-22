@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, lazy, Suspense } from "react";
+import React, { useState, lazy, Suspense } from "react";
 import ShowingModal from "../ShowingModal/ShowingModal";
 import "./Rentals.scss";
 import RentalApp from "../assets/rental-app.pdf";
@@ -25,65 +25,6 @@ const Rentals = () => {
       <header className="header">Available Rentals</header>
       <main style={{ marginTop: "0px" }}>
         <section className="rentalContent__container">
-          <div className="rentalContent__container--left">
-            <h4 style={{ fontWeight: "500" }}>
-              6225 Madelaine Dr, Newark, CA 94560
-            </h4>
-            <Suspense fallback={<div>Rental photo loading please wait...</div>}>
-              <LazyRental />
-            </Suspense>
-          </div>
-
-          <div className="rentalContent__container--right">
-            <div>
-              <p>
-                <span style={{ fontWeight: "700", fontSize: "1.5rem" }}>
-                  $3,545
-                </span>{" "}
-                per month
-              </p>
-              <p>
-                3 BR &nbsp;&nbsp; <span style={{ color: "#999999" }}>|</span>
-                &nbsp;&nbsp; 2 BA &nbsp;&nbsp;{" "}
-                <span style={{ color: "#999999" }}>|</span>&nbsp;&nbsp; 1,100 SF
-              </p>
-            </div>
-
-            <div>
-              <button
-                className="showingRequest__button"
-                onClick={handleOpenShowingModal}
-              >
-                Request Showing
-              </button>
-              <ShowingModal
-                isOpen={isShowingModalOpen}
-                onSubmit={handleFormSubmit}
-                onClose={handleCloseShowingModal}
-              />
-            </div>
-
-            <div>
-              <a href={RentalApp} target="_blank" filename="rental-application">
-                Rental Application
-              </a>
-            </div>
-
-            <div>
-              <p>Charming 3-Bedroom Home in Prime Location!</p>
-              <p style={{ color: "green" }}>
-                <strong>Available now</strong>
-              </p>
-              <p>No pets allowed</p>
-            </div>
-
-            <div>
-              <a href="https://www.zillow.com/homedetails/6225-Madelaine-Dr-Newark-CA-94560/24923992_zpid/">
-                Full Details on Zillow
-              </a>
-            </div>
-          </div>
-
           <div className="rentalContent__container--left">
             <h4 style={{ fontWeight: "500" }}>
               3913 Ashgrove Way, Sacramento, CA 95826
