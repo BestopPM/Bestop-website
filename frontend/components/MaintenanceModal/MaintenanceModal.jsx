@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import PhoneNumberInput from "../../InputMasks/PhoneNumberInput";
 import Modal from "../modal/modal";
-import emailjs from "emailjs-com";
 import { useNavigate } from "react-router-dom";
 import "./MaintenanceModal.scss";
+import emailjs from "@emailjs/browser";
 
 const initialMaintenanceModalData = {
   name: "",
@@ -53,15 +53,15 @@ const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
     emailjs
       .sendForm(
         "service_hxuywdr",
-        "template_tihakan",
+        "template_e1xmhdf",
         form.current,
-        "SGU4cgWPtbLorM_Sa"
+        "aKD-Us6N3g93XuFJ8"
       )
       .then(
         (result) => {
-          navigate("/submitted");
-          console.log(result.text);
           e.target.reset();
+          console.log(result.text);
+          navigate("/submitted");
         },
         (error) => {
           console.log(error.text);
@@ -94,7 +94,11 @@ const MaintenanceModal = ({ onSubmit, isOpen, onClose }) => {
             required
           />
           {/* phone */}
-          <PhoneNumberInput className="contact__input" value={formState.phone} onChange={handleInputChange}/>
+          <PhoneNumberInput
+            className="contact__input"
+            value={formState.phone}
+            onChange={handleInputChange}
+          />
           {/* email */}
           <input
             type="email"

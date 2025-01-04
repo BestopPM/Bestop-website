@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
 import PhoneNumberInput from "../../InputMasks/PhoneNumberInput";
 import "./Contact.scss";
-import emailjs from "emailjs-com";
 import { Link, useNavigate } from "react-router-dom";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [phone, setPhone] = useState('');
@@ -19,15 +19,15 @@ const Contact = () => {
     emailjs
       .sendForm(
         "service_hxuywdr",
-        "template_vl9raxz",
+        "template_o0qg5a4",
         form.current,
-        "SGU4cgWPtbLorM_Sa"
+        "aKD-Us6N3g93XuFJ8"
       )
       .then(
         (result) => {
-          navigate("/submitted");
-          console.log(result.text);
           e.target.reset();
+          console.log(result.text);
+          navigate("/submitted");
         },
         (error) => {
           console.log(error.text);
